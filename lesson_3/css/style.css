@@ -1,0 +1,101 @@
+@import url('reset.css');
+
+.header {
+}
+.header__menu {
+}
+.menu {
+}
+.menu__list {
+}
+.menu__item {
+}
+.menu__link {
+}
+.page {
+}
+.page__main {
+}
+.main {
+}
+.main__image {
+}
+.page__athletes {
+}
+.athletes {
+}
+.athletes__text {
+}
+.athletes__list {
+}
+.athletes__item {
+}
+.athletes__link {
+}
+.page__kids {
+}
+.kids {
+}
+.kids__list {
+}
+.page__info {
+}
+
+/*--------------------------*/
+
+/* *{
+  color: red;
+} */
+
+h1, 
+h2,
+h3{
+  color: blue;
+}
+
+#section-main{
+  color: rgb(97, 21, 21);
+}
+
+/* li{
+  color: green;
+} */
+
+.menu__list {
+  color:blueviolet;
+}
+.menu__link {
+  color: yellow;
+}
+
+p {
+  color: green;
+}
+
+.page__main a {
+  color: red;
+}
+
+.athletes__text span{
+  color: blue;
+}
+
+.athletes__list .athletes__link {
+  color: #33FF00;
+}
+
+[class*="text"] {
+  color: #FF00FF;
+}
+
+.kids__list {
+  color: #FF0000;
+}
+
+.page__info * {
+  color: blue;
+}
+
+.footer__list li {
+  color: #999900;
+}
