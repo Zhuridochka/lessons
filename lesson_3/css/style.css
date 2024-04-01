@@ -72,6 +72,22 @@ p {
   color: green;
 }
 
+a {
+  color: blue;
+}
+
+header {
+  color: green;
+}
+
+main {
+  color: red;
+}
+
+footer {
+  color: yellow;
+}
+
 .page__main a {
   color: red;
 }
@@ -82,6 +98,12 @@ p {
 
 .athletes__list .athletes__link {
   color: #33FF00;
+}
+
+.athletes__list,
+.kids__list,
+li {
+  color: #FF00FF;
 }
 
 [class*="text"] {
@@ -98,4 +120,16 @@ p {
 
 .footer__list li {
   color: #999900;
+}
+
+.page__kids p {
+  color: rgb(8, 237, 8);
+}
+
+.page__main ~ div {
+  color: purple;
+}
+
+.athletes + p {
+  color: red;
 }
