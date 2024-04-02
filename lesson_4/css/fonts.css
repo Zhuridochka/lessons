@@ -1,7 +1,7 @@
 /* Шрифт локальний Merriweather*/
 @font-face {
   font-family: 'Merriweather';
-  src: url('../fonts/Merriweather-Black.woff2') format('woff2'),
+  src: url('../fonts/Merriweather-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Merriweather';
-  src: url('../fonts/Merriweather-Bold.woff2') format('woff2'),
+  src: url('../fonts/Merriweather-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Merriweather';
-  src: url('../fonts/Merriweather-Regular.woff2') format('woff2'),
+  src: url('../fonts/Merriweather-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
