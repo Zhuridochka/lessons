@@ -1,0 +1,207 @@
+/* @import url("https://fonts.googleapis.com/css?family=Quicksand:500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:regular,700,900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:regular,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,500,800&display=swap"); */
+
+
+@import url('fonts.css');
+
+@import url('reset.css');
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 1.5625 /* 25/16 */
+}
+
+.header p {
+  font-family: 'Poppins', serif;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  color: green;
+  text-shadow: 7px 4px 4px rgba(21, 109, 21, 0.599);
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+	text-shadow:
+		5px 5px 15px rgba(0, 0, 0, 0.4),
+		-2px -2px 5px purple;
+}
+
+.page {
+  font-size: 20px;
+}
+.page-info {
+}
+.page-info__text > p{
+  text-align: end;
+  font-family: 'Poppins', serif;
+  font-size: 20px;
+  color: red;
+}
+.page-info__text span{
+  font-family: 'Proxima Nova Rg';
+  color: blue;
+  text-decoration: underline;
+}
+
+.page-info__text ul li{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: line-through;
+  text-decoration-style: dotted;
+  text-decoration-color: black;
+  color: rgb(183, 255, 0);
+}
+.page-info__text * ol li{
+  text-align: end;
+  color: brown;  
+  text-decoration-style: none;
+  text-decoration: none;
+  text-decoration: overline;
+}
+
+.page-info__text + p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-style: italic;
+  text-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-size: 26px;
+  text-align: center;
+}
+
+.page-info__state {
+  letter-spacing: 3px;
+  color: rgba(220, 36, 36, 0.896);
+  white-space: nowrap;
+}
+
+.page-info__state mark {  
+  text-transform: uppercase;
+  text-decoration: line-through;
+  text-decoration-style:double;
+  text-decoration-color: green;
+}
+
+.page-info__state a {
+  text-decoration: underline;
+  color: blue; 
+}
+
+.page-info__state + p {
+  word-spacing: 20px;
+  text-transform: capitalize;
+  font-size: 40px;
+  color:aqua;
+}
+
+.list {
+  font-style: oblique;
+  color: rgb(221, 17, 221);
+}
+h3 {
+  text-align: end;
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 7px 7px 20px #000;
+}
+
+.list ol li {
+  color: red;
+  text-align: start;
+  font-size: 25px;
+  letter-spacing: 10px;
+  line-height: 50px;
+}
+
+.footer {
+  font-family: 'Poppins', serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 60px;
+  color: blue;
+  text-shadow: -6px -6px 20px rgba(18, 18, 216, 0.785), 6px 6px 20px rgba(18, 18, 216, 0.785);
+}
+
+/*--------------------------*/
+
+.page-krovato {
+  font-family: "Proxima Nova", sans-serif;
+  color: #2b2929;
+}
+
+.page-krovato__info {
+  margin-bottom: 40px;
+}
+
+.page-krovato__info h4 {
+  font-size: 40px;
+  text-align: left;
+  line-height: 48px; /* 48/40 */
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.page-krovato__info img {
+  margin-bottom: 40px;
+}
+.page-krovato__info > p {
+  text-align: left;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.page-krovato__range {
+  text-align: left;
+  margin-bottom: 40px;  
+}
+
+.page-krovato__range h5 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.page-krovato__text > p {
+  line-height: 30px;
+  margin-bottom: 20px;
+  margin-left: 47px;
+}
+
+.page-krovato__range + p {
+  text-align: left;
+  line-height: 1.875;
+}
+
+.page-krovato__choice h4 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.20; /* 48/40 */
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.page-krovato__choice p {
+  line-height: 1.85;
+  margin-bottom: 10px;
+  text-align: left;
+}
