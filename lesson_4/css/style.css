@@ -64,8 +64,6 @@ h1 {
 .page-info__text * ol li{
   text-align: end;
   color: brown;  
-  text-decoration-style: none;
-  text-decoration: none;
   text-decoration: overline;
 }
 
