@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
+/* Підключення шрифтів локально */
+@import url('fonts.css');
+
+/* Обнулення */
+@import url('reset.css');
+
+ /*============================*/
+body {
+ font-family: 'Roboto', sans-serif;
+ color: #0000;
+}
+
+/* .block-1 p {
+  margin-bottom: 30px;
+} */
+
+/* .block:not(:last-child){
+height: 30px;
+background-color: rgb(213, 13, 213);
+overflow: visible;
+}
+
+.inline {
+background-color: rgba(32, 213, 32, 0.751);
+}
+
+.inline-block {
+background-color: rgb(95, 35, 35);
+max-width: 100%;
+} */
+
+
+/* .section{
+  width: 600px;
+  margin: 0 auto;
+} 
+
+.items {
+  margin: 0 -5px;
+  font-size: 0;
+}
+.item {
+  width: 33.333%;
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+.content {
+  background-color: purple;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+} */
+
+
+/*-----Header ----*/
+.header {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(27, 24, 24);
+  text-align: center;
+  text-shadow: -8px -8px 15px #0000007b;
+}
+
+/*----section-products---*/
+.page { 
+}
+.section-products {
+  background-color: rgba(30, 40, 50, 0.05); 
+  padding-top: 100px;
+  padding-bottom: 335px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.section-products .content { 
+  margin: 0 auto;
+  max-width: 1320px;
+}
+.title {
+  font-size: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+  margin-bottom: 60px;
+}
+.items {
+  margin: 0 -12px;
+  font-size: 0;
+}
+.item {
+  width: 16.66666666666667%;
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  vertical-align: top;
+}
+
+/*-------living-room--------------*/
+.section-living-room {
+  font-family: "Proxima Nova",sans-serif;
+  color: #2b2929;
+  line-height: 1.875;
+  background-color: #F8F8F8;
+  text-align: left;
+  padding-top: 74px;
+  padding-bottom: 280px;
+}
+.section-living-room .content {
+  margin: 0 auto;
+  max-width: 1070px;
+}
+.content-top {
+  margin-bottom: 40px;
+}
+.content-top__title {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.content-top__link {
+  margin-bottom: 40px;
+  max-width: 100%;
+}
+.content-top__text p {
+  margin-bottom: 10px;
+}
+.content-bottom {
+  
+}
+.content-bottom__subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+.content-bottom__text {
+  padding-left: 47px;
+  margin-bottom: 40px;
+}
+.content-bottom__text p {
+  margin-bottom: 20px;
+}
+
+/*-------This--------------*/
+.section-this {
+  background-color: #F8F8F8;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: #2B2929;
+  text-align: center;
+}
+.section-this__content {
+  margin: auto;
+  max-width: 1290px;
+}
+.section-this__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.section-this__title span {
+  text-transform: lowercase;
+}
+.section-this__items {
+  margin: 0 -15px;
+  font-size: 0;
+}
+.section-this__item {  
+}
+.item-this { 
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;  
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.item-this__lable {
+  margin-bottom: 20px;
+}
+.item-this__subtitle {
+  font-size: 26px;
+  line-height: 1.3076;
+  margin-bottom: 20px;
+}
+.item-this__text {
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+/*-----Footer ----*/
+.footer {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(27, 24, 24);
+  text-align: center;
+  text-shadow: -8px -8px 15px #0000007b;
+}
