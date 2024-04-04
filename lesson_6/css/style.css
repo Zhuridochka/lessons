@@ -1,0 +1,144 @@
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular&display=swap");
+
+/* Підключення шрифтів локально */
+@import url('fonts.css');
+
+/* Обнулення */
+@import url('reset.css');
+
+ /*============================*/
+body {
+ font-family: 'Proxima Nova', sans-serif;
+ font-size: 18px;
+}
+
+
+/*-----Header ----*/
+.header {
+  background: rgba(0, 0, 0, 0.010);
+  padding: 20px 0;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6563FF;
+  text-align: center;
+  text-shadow: 2px 5px 10px #6563FF;
+}
+
+/*--------Page--------*/
+.page { 
+  margin: 0 auto;
+}
+
+/* .block {
+  background: url('../img/this/check_mark.jpg') 30px center  / 100px no-repeat, url('../img/this/check_mark.jpg') right center  / 100px no-repeat, url('../img/products/image_1.jpg') center / 200px no-repeat, #a75fcb;
+}
+.inline {
+}
+
+.inline-block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.link {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 14px 40px;
+  background-color: #fff;
+  background: rgb(2,0,36);
+  background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(168,41,75,1) 48%, rgba(255,0,159,1) 100%);
+  border-radius: 20px;
+  box-shadow: 0px -5px 12px #000000e8; 
+}
+
+.link:hover {
+  background: linear-gradient(192deg, rgba(2,0,36,0.9) 0%, rgba(168,41,75,1) 48%, rgba(255,0,159,1) 95%);
+  box-shadow: 0px 5px 12px #000000b8; 
+} */
+
+/*----------------------*/
+/* .list {
+  
+}
+.list__item{  
+  background: url('../img/image.jpg') top left / 30px no-repeat;
+  margin-left: 15px; 
+  margin-bottom: 10px;
+  padding-left: 45px;
+  min-height: 30px;
+} */
+/*--------Section collections--------*/
+.collections {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  padding-top: 155px;
+  padding-bottom: 60px;  
+  background: url('../img/collection/flower_1.svg') 0 70%  / 132px no-repeat, url('../img/collection/flower_2.svg') right 60% / 195px no-repeat,
+  rgba(0, 0, 0, 0.010);
+}
+.collections__body{
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.collections__content {
+  max-width: 682px;
+  display: inline-block;
+  margin-right: 98px;
+}
+.collections__title {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 74px;
+  line-height: 0.74324;
+  margin-bottom: 52px;
+}
+.collections__text {
+  text-transform: capitalize;
+  margin-bottom: 66px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.833;
+}
+
+.collections__link {
+  padding: 19px 26px 19px 64px;
+  max-width: 223px;
+  color: #fff;
+  text-align: center;
+  font-size: 29px;
+  font-weight: 400;
+  background: url('../img/collection/icon.svg') 28px center / 30px no-repeat, #1e2832;  
+}
+
+
+
+/*--------Footer --------*/
+.footer {
+  background: rgba(0, 0, 0, 0.010);
+}
+
+.footer-list {
+  padding: 20px 0;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+}
+.footer-item {
+  
+}
+.footer-link {
+  width: 50px;
+  height: 50px;
+}
+
+
+/*------------------------*/
+
