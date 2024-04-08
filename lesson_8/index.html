@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:0,500&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Lesson 8</title> 
+</head>
+<body>
+  <header class="header">Lesson 8</header>
+  <main class="page">
+<!-- Домашнє завдання -->
+    <div class="container">
+      <h1 class="title">домашнє завдання - <br>типи зображень у верстці</h1>
+      <p>Для форматування зображення з <span>png</span>, <span>jpg</span> у формат <span>webp</span> використовувала плагін для <a target="_blank" href="https://www.figma.com/community/plugin/1127372261563355491">Figma</a></p>
+      <ul class="list">
+        <li class="list-item">
+          <div class="image">
+            <img src="img/krovato/content_image/bg_image.webp" alt="bg_image">
+          </div>
+          <p>- контентне зображення, виводиться за допомогою тегу img, растрове зображення форматуємо в webp</p>
+        </li>
+        <li class="list-item">
+          <img src="img/krovato/content_image/pay_1.svg" alt="pay_1">
+          <p>- контентне зображення, формат svg (часто використовуємо саме формати webp)</p>
+        </li>
+        <li class="list-item">
+          <img src="img/krovato/content_image/pay_2.svg" alt="pay_2">
+          <p>- контентне зображення, формат svg (часто використовуємо саме формати webp)</p>
+        </li>
+        <li class="list-item">
+          <img src="img/krovato/content_image/pay_3.svg" alt="pay_3">
+          <p>- контентне зображення, формат svg (часто використовуємо саме формати webp)</p>
+        </li>
+        <li class="list-item">
+          <img src="img/krovato/content_image/pay_4.svg" alt="pay_4">
+          <p>- контентне зображення, формат svg (часто використовуємо саме формати webp)</p>
+        </li>
+        <li class="list-item">
+          <img src="img/krovato/content_image/map.svg" alt="map">
+          <p>- контентне зображення, формат svg (часто використовуємо саме формати webp)</p>
+        </li>
+        <li class="list-item">
+          <img src="img/krovato/content_image/watch.svg" alt="watch">
+          <p>- контентне зображення, формат svg (часто використовуємо саме формати webp)</p>
+        </li>
+        <li class="list-item">
+          <img src="img/krovato/content_image/check_mark.svg" alt="check_mark">
+          <p>- контентне зображення, формат svg (часто використовуємо саме формати webp)</p>
+        </li>
+        <li class="list-item">
+          <span>- іконка, формат svg</span>
+        </li>
+        <li class="list-item">
+          <span>- іконка, формат svg</span>
+        </li>
+      </ul>
+      <h2 class="subtitle">Зображення різне за якістю яке буде виводиться для екранів зі збільшенним розширенням</h2>
+      <picture>
+        <source srcset="img/krovato/room_2x.webp 2x, img/krovato/room_3x.webp 3x">    
+        <img src="img/krovato/room_1x.webp" alt="room">
+      </picture>
+    </div>
+  </main>
+<footer class="footer">
+  <h4>Зв'яжіться зі мною</h4>
+  <ul class="footer-list">
+    <li class="footer-item">
+      <a class="footer-link" target="_blank" href="https://github.com/Zhuridochka">
+        <img src="img/footer/github.svg" alt="Icon GitHub">
+      </a>
+    </li>
+    <li class="footer-item">
+      <a class="footer-link" target="_blank" href="https://www.linkedin.com/feed/">
+        <img src="img/footer/linkedin.svg" alt="Icon linkedin">
+      </a>
+    </li>
+    <li class="footer-item">
+      <a class="footer-link" target="_blank" href="https://t.me/zhurydochka">
+        <img src="img/footer/telegram.svg" alt="Icon Telegram">
+      </a>
+    </li>
+
+    <li class="footer-item">
+      <a class="footer-link" target="_blank" href="https://www.facebook.com/ira.zhurid/">
+        <img src="img/footer/facebook.svg" alt="Icon facebook">
+      </a>
+    </li>
+  </ul>
+</footer>
+</body>
+</html>
