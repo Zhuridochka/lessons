@@ -533,7 +533,7 @@ h2 {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
-  font-family: 600px;
+  font-weight: 600;
   text-align: center;
 }
 .product-card__label:not(:last-child){
