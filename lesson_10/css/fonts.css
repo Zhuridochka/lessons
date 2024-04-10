@@ -1,8 +1,0 @@
-/*--------Шрифт Proxima Nova--------*/
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
