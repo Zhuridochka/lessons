@@ -88,6 +88,7 @@ body {
   height: 250px;
   padding: 20px;
   margin: 10px 30px;
+  vertical-align: top;
 }
 .items-2d__card {
   width: 260px;
@@ -102,7 +103,7 @@ body {
 .items-2d__card--1 {
   box-shadow: 10px 10px 13px #2d2c2c;
 }
-.items-2d__card--1:hover{
+.items-2d__item--1:hover .items-2d__card--1:hover {
   transform: translate(10%,10%)
 }
 .items-2d__item--2:hover .items-2d__card--2 {
@@ -112,25 +113,25 @@ body {
  }
 .items-2d__card--3 {
 }
-.items-2d__card--3:hover {
+.items-2d__item--3:hover .items-2d__card--3 {
   transform: scale(1.2);
   box-shadow: inset 10px 10px 15px #494848;
 }
 .items-2d__card--4 {
   box-shadow: 10px 10px 13px #2d2c2c;
 }
-.items-2d__card--4:hover {
+.items-2d__item--4:hover .items-2d__card--4 {
   transform: rotate(-70deg);
 }
 .items-2d__card--5 {
 }
-.items-2d__card--5:hover {
+.items-2d__item--5:hover .items-2d__card--5 {
   transform: skew(-15deg, 0deg);
   box-shadow: inset -10px -10px 15px #494848;
 }
 .items-2d__card--6 {
 }
-.items-2d__card--6:hover {
+.items-2d__item--6:hover .items-2d__card--6 {
   transform: translate(20%, 20%) scale(0.8) rotate(30deg) skew(20deg, 20deg);
 }
 .items-2d__card--7 {
@@ -148,14 +149,13 @@ body {
   border-radius: 50%;
   padding-top: 30%;
 }
-
 .items-2d__item--8:hover .items-2d__card--8 {
   transform-origin: 50% 0;
   transform: rotate(-70deg); 
 } 
 .items-2d__card--9 {
 }
-.items-2d__card--9:hover {
+.items-2d__item--9:hover .items-2d__card--9{
   transform: scale(-1, 1);
 }
 .items-2d__item--1 {
@@ -184,6 +184,7 @@ body {
   margin: 10px 30px;
   perspective: 300px;
   perspective-origin: center;
+  vertical-align: top;
 }
 .items-3d__card {
   width: 260px;
@@ -208,7 +209,7 @@ body {
 }
 .items-3d__card--2 {
 }
-.items-3d__card--2:hover {
+.items-3d__item--2:hover .items-3d__card--2{
   transform: rotateX(45deg);
 }
 
@@ -217,7 +218,7 @@ body {
 }
 .items-3d__card--3 {
 }
-.items-3d__card--3:hover {
+.items-3d__item--3:hover .items-3d__card--3{
   transform: translate3d(20px, -50px, 30px);
 }
 
@@ -271,27 +272,22 @@ transform: rotateY(0deg);
   height: 100%;
   transform: rotateY(180deg);
 }
-
 .items-3d__item--6 {
 }
 .items-3d__card--6 {
 }
-
 .items-3d__item--7 {
 }
 .items-3d__card--7 {
 }
-
 .items-3d__item--8 {
 }
 .items-3d__card--8 {
 }
-
 .items-3d__item--9 {
 }
 .items-3d__card--9 {
 }
-
 /*--==========Homework #2===============--*/
 .practicum__car {
 }
@@ -322,6 +318,7 @@ transform: rotateY(0deg);
 .items-car {
 }
 .items-car__part {
+
 }
 
 /*-----кузов автівки-----*/
@@ -387,6 +384,7 @@ transform: rotateY(0deg);
   border-radius: 3px;
   background-color: #405357;
   z-index: 10;
+
 }
 /*----полоска на правому вікні кузова----------*/
 .items-car__part:nth-child(7) {
@@ -658,7 +656,6 @@ transform: rotateY(0deg);
   box-shadow: 0px 0px 7px #444445;
   z-index: 24;
 }
-
 /*-----------фара жовта----------*/
 .items-car__part:nth-child(31){
   position: absolute;
@@ -673,7 +670,6 @@ transform: rotateY(0deg);
 .items-car__part:nth-child(31):hover {
   box-shadow: -25px -5px 20px 10px #f4f433;
 }
-
 /*-----------фара червона----------*/
 .items-car__part:nth-child(32){
   position: absolute;
@@ -698,7 +694,6 @@ height: 40px;
 background-color: #302A2C;
 box-shadow: 15px 15px 30px #323131;
 }
-
 /*------колесо ліве---------*/
 .items-car__part:nth-child(34) {
   position: absolute;
@@ -711,7 +706,6 @@ box-shadow: 15px 15px 30px #323131;
   box-shadow: 15px 15px 30px #323131;
   z-index: 26;
 }
-
 .items-car__part img {
   position: absolute;
   bottom: 0px;
@@ -746,7 +740,6 @@ box-shadow: 15px 15px 30px #323131;
   font-family: 'Times New Roman';
   z-index: 26;
 }
-
 /*-----------Footer--------------*/
 .footer {
   background: rgba(0, 0, 0, 0.1);
@@ -761,16 +754,16 @@ box-shadow: 15px 15px 30px #323131;
   font-style: oblique;
   text-align: center;
 }
-.footer-list {
+.footer__list {
   padding: 20px 0;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   gap: 20px;
 }
-.footer-item {  
+.footer__item {  
 }
-.footer-link {
+.footer__link {
   width: 50px;
   height: 50px;
 }
