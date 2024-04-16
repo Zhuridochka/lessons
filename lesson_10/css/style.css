@@ -380,43 +380,42 @@ h2 {
   position: absolute;
   left: 30px;
   top: 50%;
-  margin-top: -12px;
+  margin-top: -20px;
   content: '';
-  background: url('../img/catalog/01.svg') 0 0 no-repeat;
   width: 40px;
   height: 40px;
   margin-right: 15px;
   vertical-align: middle;
 }
 .catalog-menu__item:nth-child(1) .catalog-menu__link::before {
-  background: url('../img/catalog/01.svg') 0 0 no-repeat;
+  background: url('../img/catalog/01.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(2) .catalog-menu__link::before {
-  background: url('../img/catalog/02.svg') 0 0 no-repeat;
+  background: url('../img/catalog/02.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(3) .catalog-menu__link::before {
-  background: url('../img/catalog/03.svg') 0 0 no-repeat;
+  background: url('../img/catalog/03.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(4) .catalog-menu__link::before {
-  background: url('../img/catalog/04.svg') 0 0 no-repeat;
+  background: url('../img/catalog/04.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(5) .catalog-menu__link::before {
-  background: url('../img/catalog/05.svg') 0 0 no-repeat;
+  background: url('../img/catalog/05.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(6) .catalog-menu__link::before {
-  background: url('../img/catalog/06.svg') 0 0 no-repeat;
+  background: url('../img/catalog/06.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(7) .catalog-menu__link::before {
-  background: url('../img/catalog/07.svg') 0 0 no-repeat;
+  background: url('../img/catalog/07.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(8) .catalog-menu__link::before {
-  background: url('../img/catalog/08.svg') 0 0 no-repeat;
+  background: url('../img/catalog/08.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(9) .catalog-menu__link::before {
-  background: url('../img/catalog/09.svg') 0 0 no-repeat;
+  background: url('../img/catalog/09.svg') 0 center no-repeat;
 }
 .catalog-menu__item:nth-child(10) .catalog-menu__link::before {
-  background: url('../img/catalog/10.svg') 0 0 no-repeat;
+  background: url('../img/catalog/10.svg') 0 center no-repeat;
 }
 
 .catalog-menu__item .catalog-menu__link::after {
@@ -424,22 +423,13 @@ h2 {
   position: absolute;
   right: 10px;
   top: 50%;
-  margin-top: -6px;
-  background: url('../img/catalog/arrow_yellow.svg') 0 0 no-repeat;
+  background: url('../img/catalog/arrow_yellow.svg') 0 center no-repeat;
+  margin-top: -12px;
   width: 24px;
   height: 24px;
-  vertical-align: middle;
 }
 .catalog-menu__item > .catalog-menu__link:hover::after {
-  content: '';
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  margin-top: -12px;
-  background: url('../img/catalog/arrow.svg') 0 0 no-repeat;
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
+  background: url('../img/catalog/arrow.svg') 0 center no-repeat;
 }
 
 .second-menu {
