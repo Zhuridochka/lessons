@@ -247,7 +247,6 @@ body {
 .items-car {
   position: absolute;
   bottom: 60px;
-  /* right: 0; */
   right: -100%;
   width: 800px;
   height: 300px; 
@@ -255,10 +254,10 @@ body {
 }
 @keyframes moveCar {
   0% {
-    translate: 0px 0px;
+    transform: translateX(-100%);
   }
   100% {
-    translate: -220% 0px;
+    transform: translateX(-220%);
   }
 }
 .items-car__part {
@@ -497,7 +496,6 @@ body {
   border-radius: 120px 0 0 0;
   z-index: 17;
 }
-
 /*---нижня частина дверей кабіни-----*/
 .items-car__part:nth-child(19){
   position: absolute;
@@ -519,10 +517,7 @@ body {
   border-radius: 120px 0 0 0;
   z-index: 19;
   animation: downWindow 2s ease-out 36s forwards;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-  /* outline: 6px solid #C9CACF; */
 }
-
 @keyframes downWindow {
   0% {
     transform: translateY(0);
@@ -531,7 +526,6 @@ body {
     transform: translateY(80%);
   }
 }
-
 .items-car__part:nth-child(36) {
   content: '';
   position: absolute;
@@ -553,7 +547,6 @@ body {
   border-radius: 145px 0 0 0;
   background-color: #405357;
   z-index: 19;
-
   animation: downSecondWindow  2s ease-out 36s forwards;
 }
 
@@ -669,7 +662,6 @@ body {
 .items-car__part:nth-child(30):hover {
   box-shadow: -25px -5px 20px 10px #f4f433;
 }
-
 @keyframes shadowAnimationYellow {
   0% {
     box-shadow: none;
@@ -713,7 +705,6 @@ box-shadow: 15px 15px 30px #323131;
   width: 132px;
   height: 132px;
   border-radius: 50%;
-  /* box-shadow: 15px 15px 30px #323131; */
   z-index: 26;
 }
 .items-car__part img {
@@ -754,7 +745,6 @@ box-shadow: 15px 15px 30px #323131;
 .items-car__part:nth-child(34) {
   animation-name: wheelRotation;
   animation-timing-function: linear;
-  /* animation-direction: alternate; */
   animation-duration: 1s;
   animation-delay: 25s;
   animation-iteration-count: 10;
@@ -775,13 +765,11 @@ box-shadow: 15px 15px 30px #323131;
   left: 50%;
   width: 270px;
   height: 270px;
-
   animation: slideDown 4s linear;
 }
 .car-practicum__image {
   max-width: 100%; 
 }
-
 @keyframes slideDown {
   0% {
     transform: translateY(-100%) translateX(-100%) scale(0); 
@@ -793,7 +781,6 @@ box-shadow: 15px 15px 30px #323131;
     transform: translateY(70%) translateX(70%) scale(1); 
   }
 }
-
 /*-----------Поліцейський-----------*/
 .car-practicum__policeman {
   position: absolute;
