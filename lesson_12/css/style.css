@@ -247,6 +247,7 @@ body {
 .items-car {
   position: absolute;
   bottom: 60px;
+  /* right: 0; */
   right: -100%;
   width: 800px;
   height: 300px; 
@@ -477,7 +478,11 @@ body {
   left: 180px;
   width: 170px;
   height: 85px;
-  background-color: #302A2C;
+  border-top: 19px solid #302A2C;
+  border-right: 4px solid #302A2C;
+  border-bottom: 0px solid #302A2C;
+  border-left: 19px solid #302A2C;
+  background-color: rgba(48, 42, 44, 0.641);
   border-radius: 120px 0 0 0;
   z-index: 16;
 }
@@ -513,17 +518,29 @@ body {
   background-color: #303E3F;
   border-radius: 120px 0 0 0;
   z-index: 19;
-  outline: 6px solid #C9CACF;
+  animation: downWindow 2s ease-out 36s forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* outline: 6px solid #C9CACF; */
 }
 
-.items-car__part:nth-child(20)::after {
+@keyframes downWindow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(80%);
+  }
+}
+
+.items-car__part:nth-child(36) {
   content: '';
   position: absolute;
   width: 140px;
   height: 65px;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 205px;
   border-radius: 120px 0 0 0;
+  outline: 6px solid #C9CACF;
   z-index: 19;
 }
 /*---полоска на вікні дверей кабіни-----*/
@@ -535,7 +552,18 @@ body {
   height: 15px;
   border-radius: 145px 0 0 0;
   background-color: #405357;
-  z-index: 20;
+  z-index: 19;
+
+  animation: downSecondWindow  2s ease-out 36s forwards;
+}
+
+@keyframes downSecondWindow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(47px);
+  }
 }
 /*------ручка на дверях кабіни-------*/
 .items-car__part:nth-child(22){
