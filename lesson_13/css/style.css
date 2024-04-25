@@ -45,12 +45,12 @@ body {
 
 /*-----------Header---------------*/ 
 .header {
-  /* position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; */
+  width: 100%;
   min-height: 220px;
-  /* z-index: 100; */
+  z-index: 100;
 }
 .header--margin {
   margin-bottom: 70px;
@@ -311,12 +311,13 @@ body {
   line-height: 1.26;
   transition: all 0.4s;
 }
-.stock-section__item:hover {
-  color: rgba(104, 102, 102, 0.95);
-}
 .stock-section__link {
   display: inline-flex;
   align-items: center;
+}
+.stock-section__link:hover{
+  color: rgba(104, 102, 102, 0.95);
+  text-decoration: underline;
 }
 .stock-section__link::before {
   content: '';
@@ -360,15 +361,34 @@ body {
 }
 .room-type__link {
 }
-
+/*------------Inform----------*/
+.page__inform {
+}
+.inform {
+  display: inline-flex;
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  width: 150px;
+  height: 130px;
+  background-color: hsla(36, 92%, 59%, 0.819);
+  border-radius: 35% 35% 0 35%;
+  z-index: 100;
+}
+.inform__content {
+  align-self: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
 /*==========Main========================*/
-
 .page__container {
+  margin-top: 290px;
 }
 .page__popular {
   margin-bottom: 70px;
 }
-
 .popular__name {
 }
 .popular__title {
@@ -404,7 +424,9 @@ body {
   box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.06);
 }
 .item-popular__image img {
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .item-popular:hover .item-popular__image{
   transform: scale(1.1); 
@@ -509,7 +531,10 @@ body {
   transition: transform 0.4s;
 }
 .item-product__image img {
-  max-width: 100%;
+ display: block;
+ width: 100%;
+ height: 100%;
+ border-radius: 8px;
 }
 .item-product__image:hover {
   transform: scale(1.1); 
@@ -655,10 +680,18 @@ body {
 .item-stock {
   border-radius: 8px;
 }
+.item-stock:hover {
+  box-shadow: 0px 7px 15px #676464;
+}
 .item-stock__link {
+max-width: 410px;
+height: 100%;
 }
 .item-stock__link img {
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 /*-----------Footer--------------*/
