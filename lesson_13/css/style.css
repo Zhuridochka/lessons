@@ -411,6 +411,7 @@ body {
   flex-basis: 250px;
 }
 .item-popular {
+  box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.06);
 }
 .item-popular__inner {
   overflow: hidden;
@@ -421,7 +422,6 @@ body {
   display: inline-block;
   background: url('../img/main/popular/frame_bg.webp') bottom no-repeat, #fff;
   border-radius: 8px;
-  box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.06);
   overflow: hidden;
 }
 .item-popular__image img {
