@@ -404,9 +404,6 @@ body {
   row-gap: 24px;
   overflow: hidden;
 }
-.item-popular__inner {
-  overflow: hidden;
-}
 .card-popular__item {
   position: relative;
   font-size: 20px;
@@ -415,12 +412,17 @@ body {
 }
 .item-popular {
 }
+.item-popular__inner {
+  overflow: hidden;
+}
 .item-popular__image {
   position: relative;
+  bottom: 0;
   display: inline-block;
-  background-color: #fff;
+  background: url('../img/main/popular/frame_bg.webp') bottom no-repeat, #fff;
   border-radius: 8px;
   box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 .item-popular__image img {
   display: block;
