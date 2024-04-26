@@ -198,6 +198,9 @@ body {
   border: 1px solid #B1B1B1;
   padding: 10px;
 }
+.middle-section__search:hover {
+  box-shadow: inset 0px 0px 8px #bab6b6;
+}
 .middle-section__entry {
   line-height: 1.87;
   color: #B1B1B1;
