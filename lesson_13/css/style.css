@@ -399,7 +399,6 @@ body {
 .card-popular {
   display: flex;
   align-items: center;
-  flex-basis: 250px;
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 24px;
@@ -412,7 +411,7 @@ body {
   position: relative;
   font-size: 20px;
   line-height: 1.40; /* 28/20 */
-  max-width: 250px;
+  flex-basis: 250px;
 }
 .item-popular {
 }
@@ -507,12 +506,11 @@ body {
 }
 .card-product {
   display: flex; 
-  flex-basis: 300px;
   flex-wrap: wrap;
   gap: 30px;
 }
 .card-product__item {
-  max-width: 300px;
+  flex-basis: 300px;
 }
 .item-product {
   border-radius: 8px;
@@ -672,12 +670,13 @@ body {
 }
 .card-stock {
   display: flex;
-  flex-basis: 410px;
   gap: 30px;
 }
 .card-stock__item {
+ 
 }
 .item-stock {
+  flex-basis: 410px;
   border-radius: 8px;
 }
 .item-stock:hover {
