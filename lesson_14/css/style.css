@@ -503,6 +503,7 @@ input[type="date"] {
 }
 .delivery-box__line {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 25px;
   row-gap: 30px;
 }
@@ -514,6 +515,8 @@ input[type="date"] {
 .radio-delivery {
   position: relative;
   flex-basis: 210px;
+  flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -523,6 +526,7 @@ input[type="date"] {
   border: 3px solid #f8f8f8;
   background: #fff;
   padding: 20px;
+  transition: all 0.3s;
 }
 .radio-delivery__input {
   position: absolute;
@@ -546,9 +550,9 @@ input[type="date"] {
   margin-bottom: 10px;
 }
 
-.radio-delivery__input:checked .delivery-box__radio {
+.radio-delivery:has(> .radio-delivery__input:checked) {
   border: 3px solid #ffbc57;
-} /*! Чому цей бордер не працює при відміченній радіокнопці? */
+} /*! цей бордер працює при відміченній радіокнопці */
 
 .radio-delivery__image {
   width: 40px;
@@ -565,6 +569,8 @@ input[type="date"] {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.3s;
 }
 
 .radio-delivery__price {
