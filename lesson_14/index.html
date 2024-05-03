@@ -166,7 +166,7 @@
         <div class="page__container-small">
           <h2 class="page__title title">Оформлення замовлення</h2>
           <section class="page__orders orders">
-            <form class="orders__form form" action="#" method="post" enctype="multipart/form-data">
+            <div class="orders__form form" action="#" method="post" enctype="multipart/form-data">
 
               <section class="form__buyer buyer-box">
                 <div class="buyer-box__inner">
@@ -204,7 +204,7 @@
                     </div>
                     <h3 class="subtitle__name">Вибір способу доставки</h3>
                   </div>
-                  <form class="delivery-box__choice" enctype="multipart/form-data" action="#">
+                  <div class="delivery-box__choice">
                     <div class="delivery-box__line">
                       <label class="delivery-box__radio radio-delivery">
                         <input class="radio-delivery__input" type="radio" name="delivery">
@@ -226,10 +226,13 @@
                       </label>
 
                     </div>
-                  </form>
+                    <div class="delivery-box__location location">
+
+                    </div>
+                  </div>
                 </div>
               </section>
-            </form>
+            </div>
           </section>
         </div>
       </div>
