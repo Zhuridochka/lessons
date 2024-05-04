@@ -764,14 +764,14 @@ input[type="date"] {
 .comment-box__line {
   width: 100%;
 }
-.radio-comment__area {
+.comment-box__area {
   width: 100%;
   min-height: 150px;
   border: 1px solid #d1d5d5;
   padding: 12px 20px;
   color: #535353;
 }
-.radio-comment__area::placeholder {
+.comment-box__area::placeholder {
   color: #535353;
   line-height: 1.87;
   border-radius: 8px;
