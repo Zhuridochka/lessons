@@ -472,25 +472,14 @@ input[type="date"] {
 }
 .column-right {
 }
-.column-right__secondname,
-.column-right__firstname,
-.column-right__surname,
-.column-left__phone,
-.column-left__email {
+.column-left {
+}
+.column-right__item,
+.column-left__item {
   border-radius: 8px;
   border: 1px solid #d1d5d5;
   background: #fff;
   padding: 10px 20px;
-}
-.column-right__firstname {
-}
-.column-right__surname {
-}
-.column-left {
-}
-.column-left__phone {
-}
-.column-left__email {
 }
 .buyer-box__recipient {
 }
