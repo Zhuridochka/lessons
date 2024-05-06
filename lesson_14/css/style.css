@@ -510,8 +510,11 @@ input[type="date"] {
   opacity: 0;
 }
 .checkbox-recipient__input:focus-visible + .checkbox-recipient__text {
-  outline: 1px solid rgb(100, 95, 95);
+  outline: 3px solid #f69402;
   outline-offset: 5px;
+}
+.buyer-box__items input:focus-visible {
+  outline: 3px solid #f69402;
 }
 .checkbox-recipient__input:checked + .checkbox-recipient__text::before {
   background: url("../img/main/form_order/buyer_info/check_yes.svg") center
@@ -595,9 +598,15 @@ input[type="date"] {
   background: url("../img/main/form_order/delivery/check_circle.svg") no-repeat;
   margin-bottom: 10px;
 }
-.radio-delivery:has(> .radio-delivery__input:checked) {
-  border: 3px solid #ffbc57;
+
+.radio-delivery:has(> .radio-delivery__input:checked),
+.radio-delivery:has(> .radio-delivery__input:focus) {
+  border: 3px solid #f69402;
 } /*! цей бордер працює при відміченній радіокнопці */
+
+/* .radio-delivery:has(> .radio-delivery__input:focus) {
+  outline: 3px solid #ffbc57;
+} */
 
 .radio-delivery__image {
   width: 40px;
@@ -649,8 +658,16 @@ input[type="date"] {
   border-radius: 50%;
   transition: all 0.4s;
 }
+.content-location__icon img {
+  display: inline-flex;
+  align-self: center;
+}
 .content-location__icon:hover .content-location__image {
   transform: scale(1.2);
+}
+.content-location__icon:focus-visible {
+  outline: 3px solid #f69402;
+  outline-offset: 3px;
 }
 .text-location {
   color: #2b2929;
@@ -668,8 +685,7 @@ input[type="date"] {
 }
 .location__line {
 }
-.location__button {
-}
+
 /*---------Section-payment-------*/
 .form__payment {
 }
@@ -713,7 +729,10 @@ input[type="date"] {
     center no-repeat;
   border: 3px solid #ffbc57;
 }
-.radio-payment__text {
+.radio-payment__input:focus-visible + .radio-payment__text {
+  border: 3px solid #f69402;
+}
+rgb(91, 88, 83) .radio-payment__text {
   display: flex;
   align-items: center;
   font-size: 17px;
@@ -770,6 +789,9 @@ input[type="date"] {
   border: 1px solid #d1d5d5;
   padding: 12px 20px;
   color: #535353;
+}
+.comment-box__area:focus-visible {
+  outline: 3px solid #f69402;
 }
 .comment-box__area::placeholder {
   color: #535353;
