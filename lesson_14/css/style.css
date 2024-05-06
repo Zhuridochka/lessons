@@ -588,10 +588,13 @@ input[type="date"] {
   margin-bottom: 10px;
 }
 
-.radio-delivery:has(> .radio-delivery__input:checked),
-.radio-delivery:has(> .radio-delivery__input:focus) {
+.radio-delivery:has(> .radio-delivery__input:checked) {
   border: 3px solid #f69402;
 } /*! цей бордер працює при відміченній радіокнопці */
+
+.radio-delivery:has(> .radio-delivery__input:focus-visible) {
+  outline: 3px solid #f69402;
+}
 
 /* .radio-delivery:has(> .radio-delivery__input:focus) {
   outline: 3px solid #ffbc57;
@@ -719,9 +722,10 @@ input[type="date"] {
   border: 3px solid #ffbc57;
 }
 .radio-payment__input:focus-visible + .radio-payment__text {
-  border: 3px solid #f69402;
+  outline: 3px solid #f69402;
+  outline-offset: 3px;
 }
-rgb(91, 88, 83) .radio-payment__text {
+.radio-payment__text {
   display: flex;
   align-items: center;
   font-size: 17px;
@@ -745,16 +749,7 @@ rgb(91, 88, 83) .radio-payment__text {
   width: 100%;
   height: 100%;
 }
-.radio-payment__master {
-}
-.radio-payment__visa {
-}
-.radio-payment__privat {
-}
-.radio-payment__privatcredit {
-}
-.radio-payment__monobank {
-}
+
 /*---------Section-comment-------*/
 .form__comment {
 }
