@@ -57,7 +57,7 @@ body {
   margin-bottom: 70px;
 }
 
-.page h1 {
+.page h2 {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
@@ -175,6 +175,7 @@ input[type="date"] {
 .form__line {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .form__group {
   border: 2px solid #cd4f79;
@@ -214,7 +215,8 @@ input[type="date"] {
   line-height: 1.3;
   min-width: 180px;
   margin-bottom: 20px;
-  background: url("../img") 0 0 no-repeat;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .search {
@@ -346,7 +348,6 @@ input[type="date"] {
 
 /*--Обмежуючий контейнер для форми--*/
 .page__container-small {
-  border-radius: 8px;
 }
 /*--------Загальні стилі--------------*/
 .title {
@@ -423,6 +424,7 @@ input[type="date"] {
 .page__orders {
   margin-bottom: 5px;
   background: #fff;
+  border-radius: 8px;
   box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 }
 .orders {
@@ -543,7 +545,7 @@ input[type="date"] {
 }
 .delivery-box__line {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   column-gap: 25px;
   row-gap: 30px;
   margin-bottom: 30px;
@@ -587,19 +589,12 @@ input[type="date"] {
   background: url("../img/main/form_order/delivery/check_circle.svg") no-repeat;
   margin-bottom: 10px;
 }
-
 .radio-delivery:has(> .radio-delivery__input:checked) {
   border: 3px solid #f69402;
-} /*! цей бордер працює при відміченній радіокнопці */
-
+}
 .radio-delivery:has(> .radio-delivery__input:focus-visible) {
   outline: 3px solid #f69402;
 }
-
-/* .radio-delivery:has(> .radio-delivery__input:focus) {
-  outline: 3px solid #ffbc57;
-} */
-
 .radio-delivery__image {
   width: 40px;
   height: 40px;
@@ -616,6 +611,7 @@ input[type="date"] {
   align-items: center;
   border-radius: 8px;
   white-space: nowrap;
+  min-width: 170px;
   transition: all 0.3s;
 }
 .radio-delivery__price {
@@ -770,9 +766,11 @@ input[type="date"] {
 .comment-box__area {
   width: 100%;
   min-height: 150px;
+
   border: 1px solid #d1d5d5;
   padding: 12px 20px;
   color: #535353;
+  resize: vertical;
 }
 .comment-box__area:focus-visible {
   outline: 3px solid #f69402;
@@ -800,6 +798,7 @@ input[type="date"] {
   font-weight: 600;
   line-height: 1.26;
   transition: all 0.4s;
+  cursor: pointer;
 }
 .form__button:hover {
   transform: scale(1.04);
