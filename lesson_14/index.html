@@ -16,8 +16,7 @@
     <main class="page">
       <div class="page__container">
         <section class="page__practice">
-          <h1>Головний блок форми 'form'</form>
-          </h1>
+          <h2>Головний блок форми 'form'</h2>
           <form class="form" enctype="multipart/form-data" action="#" method="get">
             <div class="form__line">
               <input required maxlength="5" minlength="3" tabindex="1" autocomplete="on" name="form[]" placeholder="Введіть своє прізвище" class="form__input" type="text">
@@ -162,7 +161,7 @@
       </div>
       <div class="page__wrap">
         <div class="page__container-small">
-          <h2 class="page__title title">Оформлення замовлення</h2>
+          <h1 class="page__title title">Оформлення замовлення</h1>
           <div class="page__orders orders">
             <form class="orders__form form" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" enctype="multipart/form-data">
 
@@ -176,8 +175,8 @@
                   </div>
                   <div class="buyer-box__items items-body">
                     <div class="items-body__column column-right">
-                      <input required placeholder="Прізвище" class="column-right__item" type="text" name="form[]" autocomplete="on" pattern="[А-ЩЬЮЯҐЄІЇа-щьюяґєії\s'-]+">
-                      <input required placeholder="Ім’я" class="column-right__item" type="text" name="form[]" autocomplete="on" pattern="[А-ЩЬЮЯҐЄІЇа-щьюяґєії\s'-]+">
+                      <input required placeholder="Прізвище" class="column-right__item" type="text" name="form[]" autocomplete="on" pattern="[А-ЯЁҐЄІЇа-яёґєії\s'-]+">
+                      <input required placeholder="Ім’я" class="column-right__item" type="text" name="form[]" autocomplete="on" pattern="[А-ЯЁҐЄІЇа-яёґєії\s'-]+">
                       <input placeholder="По батькові" class="column-right__item" type="text" name="form[]" autocomplete="on" pattern="[А-ЩЬЮЯҐЄІЇа-щьюяґєії\s'-]+">
                     </div>
                     <div class="items-body__column column-left">
@@ -205,19 +204,19 @@
                   <div class="delivery-box__choice">
                     <div class="delivery-box__line">
                       <label class="delivery-box__radio radio-delivery">
-                        <input class="radio-delivery__input" type="radio" name="delivery">
+                        <input checked class="radio-delivery__input" type="radio" value="pickup" name="delivery">
                         <img class="radio-delivery__image" src="img/main/form_order/delivery/icon_shop.svg" alt="Image">
                         <span class="radio-delivery__text">Самовивіз із магазину</span>
                         <span class="radio-delivery__price">Бесплатно</span>
                       </label>
                       <label class="delivery-box__radio radio-delivery">
-                        <input class="radio-delivery__input" type="radio" name="delivery">
+                        <input class="radio-delivery__input" type="radio" value="nova_post" name="delivery">
                         <img class="radio-delivery__image" src="img/main/form_order/delivery/nova_post.svg" alt="Image">
                         <span class="radio-delivery__text">Доставка Нова Пошта</span>
-                        <span class="radio-delivery__price">Бесплатно</span>
+                        <span class="radio-delivery__price">≈ від 500 грн</span>
                       </label>
                       <label class="delivery-box__radio radio-delivery">
-                        <input class="radio-delivery__input" type="radio" name="delivery">
+                        <input class="radio-delivery__input" type="radio" value="courier" name="delivery">
                         <img class="radio-delivery__image" src="img/main/form_order/delivery/shop_person.svg" alt="Image">
                         <span class="radio-delivery__text">Доставка кур'єром</span>
                         <span class="radio-delivery__price">≈ від 200 грн</span>
@@ -256,11 +255,11 @@
                   <div class="payment-box__choice">
                     <div class="payment-box__line">
                       <label class="payment-box__radio radio-payment">
-                        <input class="radio-payment__input" type="radio" name="payment">
+                        <input class="radio-payment__input" type="radio" name="payment" value="postpaid">
                         <span class="radio-payment__text">Готівкою при отриманні (Післясплата)</span>
                       </label>
                       <label class="payment-box__radio radio-payment">
-                        <input class="radio-payment__input" type="radio" name="payment">
+                        <input checked class="radio-payment__input" type="radio" name="payment" value="payment_site">
                         <span class="radio-payment__text">Оплата карткою на сайті</span>
                         <a class="radio-payment__card" href="https://www.mastercard.ua/uk-ua.html">
                           <img src="img/main/form_order/payment/master_card_logo.svg" alt="Logo card of Mastercard">
@@ -270,25 +269,25 @@
                         </a>
                       </label>
                       <label class="payment-box__radio radio-payment">
-                        <input class="radio-payment__input" type="radio" name="payment">
+                        <input class="radio-payment__input" type="radio" name="payment" value="privat_pay">
                         <span class="radio-payment__text">Privat Pay</span>
                         <a class="radio-payment__card" href="https://www.liqpay.ua/methods/privat_pay">
                           <img src="img/main/form_order/payment/privat_pay_logo.svg" alt="Logo card of PrivatPay">
                         </a>
                       </label>
                       <label class="payment-box__radio radio-payment">
-                        <input class="radio-payment__input" type="radio" name="payment">
+                        <input class="radio-payment__input" type="radio" name="payment" value="credit">
                         <span class="radio-payment__text">Кредит від Krovato</span>
                       </label>
                       <label class="payment-box__radio radio-payment">
-                        <input class="radio-payment__input" type="radio" name="payment">
+                        <input class="radio-payment__input" type="radio" name="payment" value="privatbank_in_installments">
                         <span class="radio-payment__text">Оплата частинами ПриватБанк</span>
                         <a class="radio-payment__card" href="https://privatbank.ua/">
                           <img src="img/main/form_order/payment/privaty_credit_logo.svg" alt="Logo card of Privat Credit">
                         </a>
                       </label>
                       <label class="payment-box__radio radio-payment">
-                        <input class="radio-payment__input" type="radio" name="payment">
+                        <input class="radio-payment__input" type="radio" name="payment" value="monobank_in_installments">
                         <span class="radio-payment__text">Оплата частинами МоноБанк</span>
                         <a class="radio-payment__card" href="https://www.monobank.ua/?lang=uk">
                           <img src="img/main/form_order/payment/mono_bank_logo.svg" alt="Logo logo of Monobank">
