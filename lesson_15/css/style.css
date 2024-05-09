@@ -156,6 +156,7 @@ body {
 .information__item {
 }
 .information__link {
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   transition: transform 0.4s;
@@ -390,6 +391,7 @@ body {
   display: flex;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 .purchases__heart-icon img,
 .purchases__basket-icon img {
@@ -520,6 +522,7 @@ body {
     display: flex;
     width: 50px;
     height: 50px;
+    border-radius: 50%;
   }
   .purchases__search-icon img {
     width: 100%;
