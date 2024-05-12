@@ -98,7 +98,7 @@ body {
 /*-----------Header---------------*/
 /**---------Верх шапки------------*/
 .header {
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -261,6 +261,9 @@ body {
   .sub-information__item:hover {
     color: #ffbc57;
   }
+  .languages__list:hover::after {
+    transform: rotate(-180deg);
+  }
 }
 /**---------Середина шапки------------*/
 .header__section-middle {
@@ -374,7 +377,7 @@ body {
 
 @media (any-hover: hover) {
   .middle-section__contacts:hover .middle-section__phone {
-    text-decoration: underline;
+    color: #ffbc57;
   }
 }
 .middle-section__purchases {
