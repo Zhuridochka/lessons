@@ -10,7 +10,6 @@
 
 <body>
   <div class="wrapper">
-    <!-- <header class="header">урок Flex</header> -->
     <header class="header header--margin">
       <div class="header__section-top top-section">
         <div class="top-section__container">
@@ -69,6 +68,12 @@
                       <li class="sub-information__item">
                         <a href="#" class="sub-information__link">EN</a>
                       </li>
+                      <li class="sub-information__item">
+                        <a href="#" class="sub-information__link">GER</a>
+                      </li>
+                      <li class="sub-information__item">
+                        <a href="#" class="sub-information__link">pl</a>
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -80,38 +85,35 @@
 
       <div class="header__section-middle middle-section">
         <div class="middle-section__container">
-          <div href="#" class="middle-section__logo">
+          <div class="middle-section__logo">
             <img src="img/header/logo-header.svg" alt="logo picture">
           </div>
-
           <a href="#" class="middle-section__button button">Каталог</a>
           <!-- Зробити form -->
-          <div class="middle-section__search">
-            <input class="middle-section__entry" type="text" id="searchInput" placeholder="Пошук товарів">
-            <a href="#" class="middle-section__icon">
+          <form class="middle-section__search" action="https://jkorpela.fi/cgi-bin/echo.cgi">
+            <input class="middle-section__entry" type="search" id="searchInput" placeholder="Пошук товарів">
+            <button class="middle-section__icon" type="submit">
               <img src="img/header/poisk.svg" alt="Poisk icon">
-            </a>
-          </div>
+            </button>
+          </form>
           <div class="middle-section__wrap">
             <div class="middle-section__contacts">
               <p class="middle-section__schedule">
                 Щодня з 9:00 до 18:00
               </p>
               <a href="tel:0679294545" class="middle-section__phone">
-                <p class="middle-section__number">
-                  067 929-45-45
-                </p>
+                067 929-45-45
               </a>
             </div>
           </div>
           <div class="middle-section__purchases purchases">
-            <a href="#" class="purchases__search-icon">
+            <a href="#" class="purchases__icon purchases__icon--search">
               <img src="img/header/icon_search.svg" alt="Icon search">
             </a>
-            <a href="#" class="purchases__heart-icon">
+            <a href="#" class="purchases__icon purchases__icon--heart">
               <img src="img/header/heart.svg" alt="Icon heart">
             </a>
-            <a href="#" class="purchases__basket-icon">
+            <a href="#" class="purchases__icon purchases__icon--basket">
               <img src="img/header/basket.svg" alt="Icon basket">
             </a>
           </div>
@@ -166,11 +168,11 @@
       </div>
     </header>
     <main class="page">
-      <div class="page__inform inform">
+      <!-- <div class="page__inform inform">
         <a href="#" class="inform__content">
           <p>Я менеджер сайту</p>
         </a>
-      </div>
+      </div> -->
       <div class="page__container">
         <section class="page__popular popular">
           <div class="popular__name">
@@ -312,7 +314,7 @@
                 </a>
                 <div class="item-product__category">
                   <p>Розмір: 61 x 184 x 2130 мм</p>
-                  <a href="#">Ліжко Спарта / Sparta з підйомним механізмом</a>
+                  <a href="#">Ліжко Спарта / Sparta з підйомним механізмом Lorem, ipsum dolor.</a>
                   <p><span>В наявності</span></p>
                 </div>
                 <div class="item-product__price">
@@ -338,12 +340,12 @@
                 </a>
                 <div class="item-product__category">
                   <p>Розмір: 61 x 184 x 2130 мм</p>
-                  <a href="#">Ліжко Аргон з підйомним механізмом</a>
+                  <a href="#">Ліжко Престиж з підйомним механізмом</a>
                   <p><span>В наявності</span></p>
                 </div>
                 <div class="item-product__price">
                   <div class="item-product__tag">
-                    <div class="item-product__newprice">16 400 грн.</div>
+                    <div class="item-product__newprice">14 969 грн.</div>
                   </div>
                   <div class="item-product__purchases purchases">
                     <a href="#" class="purchases__heart-icon">
@@ -527,19 +529,25 @@
           </div>
           <ul class="stock__cards card-stock">
             <li class="card-stock__item item-stock">
-              <a href="#" class="item-stock__link">
-                <img src="img/main/stock/akciya_1.webp" alt="Реклама акции № 1">
-              </a>
+              <div class="item-stock__inner">
+                <a href="#" class="item-stock__link">
+                  <img src="img/main/stock/akciya_1.webp" alt="Реклама акции № 1">
+                </a>
+              </div>
             </li>
             <li class="card-stock__item item-stock">
-              <a href="#" class="item-stock__link">
-                <img src="img/main/stock/akciya_2.webp" alt="Реклама акции № 2">
-              </a>
+              <div class="item-stock__inner">
+                <a href="#" class="item-stock__link">
+                  <img src="img/main/stock/akciya_2.webp" alt="Реклама акции № 2">
+                </a>
+              </div>
             </li>
             <li class="card-stock__item item-stock">
-              <a href="#" class="item-stock__link">
-                <img src="img/main/stock/akciya_3.webp" alt="Реклама акции № 3">
-              </a>
+              <div class="item-stock__inner">
+                <a href="#" class="item-stock__link">
+                  <img src="img/main/stock/akciya_3.webp" alt="Реклама акции № 3">
+                </a>
+              </div>
             </li>
           </ul>
         </section>
