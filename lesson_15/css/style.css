@@ -98,7 +98,7 @@ body {
 /*-----------Header---------------*/
 /**---------Верх шапки------------*/
 .header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
@@ -174,7 +174,7 @@ body {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  transition: transform 0.4s;
+  transition: all 0.9s;
 }
 .information__link img {
   border-radius: 50%;
@@ -184,7 +184,7 @@ body {
 @media (any-hover: hover) {
   .information__item:hover .information__link {
     transform: scale(1.1);
-    box-shadow: 2px 3px 6px #5b5858;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
   }
 }
 .information__languages {
@@ -227,32 +227,36 @@ body {
 }
 .languages__sub-information {
   display: none;
-  transition: all 0.5s;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: all 0.4s;
 }
 .sub-information__list {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
-  padding-top: 5px;
+  padding: 5px;
   color: #2b2929;
   z-index: 4;
+  padding: 5px 10px 10px 5px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s;
 }
 .sub-information__item:not(:last-child) {
   margin-bottom: 5px;
 }
 .sub-information__item {
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 .sub-information__link {
   vertical-align: middle;
+  text-transform: uppercase;
 }
 @media (any-hover: hover) {
   .languages__list:hover .languages__sub-information {
     display: block;
-  }
-  .languages__list:hover {
-    color: #ffbc57;
   }
   .sub-information__item:hover {
     color: #ffbc57;
@@ -271,14 +275,14 @@ body {
   padding: 20px 15px;
 }
 .middle-section__logo {
+  display: flex;
   width: 250px;
-  height: 50px;
-  align-self: center;
+  overflow: hidden;
+  flex-shrink: 0;
   margin-right: 5px;
 }
 .middle-section__logo img {
-  width: 100%;
-  height: 100%;
+  width: 250px;
 }
 .middle-section__button::before {
   display: inline-flex;
@@ -307,13 +311,15 @@ body {
 }
 @media (any-hover: hover) {
   .middle-section__search:hover {
-    box-shadow: inset 0px 0px 8px #bab6b6;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.4);
   }
 }
 .middle-section__entry {
   line-height: 1.87;
-  color: #b1b1b1;
+  color: black;
+  padding: 0 5px;
   cursor: pointer;
+  margin-right: 5px;
 }
 .middle-section__wrap {
   display: flex;
@@ -358,8 +364,6 @@ body {
   line-height: 1.69;
 }
 .middle-section__phone {
-}
-.middle-section__number {
   font-family: "Proxima Nova", sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -367,8 +371,9 @@ body {
   color: #2b2929;
   transition: all 0.4s;
 }
+
 @media (any-hover: hover) {
-  .middle-section__contacts:hover .middle-section__number {
+  .middle-section__contacts:hover .middle-section__phone {
     text-decoration: underline;
   }
 }
@@ -380,29 +385,24 @@ body {
   gap: 20px;
   transition: all 0.4s;
 }
-.purchases__search-icon {
+.purchases__icon--basket {
   display: none;
 }
-.purchases__heart-icon,
-.purchases__basket-icon {
+.purchases__icon {
   display: flex;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-.purchases__heart-icon img,
-.purchases__basket-icon img {
+.purchases__icon img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 @media (any-hover: hover) {
-  .purchases__heart-icon:hover,
-  .purchases__basket-icon:hover {
+  .purchases__icon:hover {
     box-shadow: 0px 0px 10px #ffbc57;
   }
-}
-.purchases__basket-icon {
 }
 
 /**---------Низ шапки------------*/
@@ -418,35 +418,28 @@ body {
 }
 .bottom-section__holder {
   display: flex;
-  text-align: center;
+  align-items: center;
   justify-content: space-between;
 }
 .bottom-section__stock {
+  align-self: center;
 }
 .stock-section {
-  align-self: center;
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 1.26;
 }
 .stock-section__list {
   display: flex;
   justify-content: space-between;
   gap: 40px;
+}
+.stock-section__item {
+  transition: all 0.4s;
+}
+.stock-section__link {
   font-size: 19px;
   font-weight: 600;
   line-height: 1.26;
   white-space: nowrap;
-}
-.stock-section__item {
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 1.26;
-  transition: all 0.4s;
-}
-.stock-section__link {
   display: inline-flex;
-  align-items: center;
 }
 @media (any-hover: hover) {
   .stock-section__link:hover {
@@ -472,18 +465,11 @@ body {
   background: url("../img/header/buy_credit.svg") center center no-repeat;
   margin-right: 10px;
 }
-@media (any-hover: hover) {
-  .stock-section__link:hover::before {
-    transform: rotate(-45deg);
-  }
-}
 .bottom-section__type-room {
 }
 .room-type {
-  align-self: center;
 }
 .room-type__body {
-  justify-content: space-between;
 }
 .room-type__list {
   display: flex;
@@ -511,6 +497,10 @@ body {
   .room-type__list {
     column-gap: 20px;
     row-gap: 10px;
+  }
+  .middle-section__logo {
+    width: 170px;
+    justify-content: flex-end;
   }
 }
 @media (max-width: 1074px) {
@@ -592,6 +582,7 @@ body {
   }
   .icon-menu {
     display: block;
+    flex-shrink: 0;
     width: 30px;
     height: 18px;
     position: relative;
@@ -622,7 +613,7 @@ body {
   .hidden-menu__phone {
     display: none;
   }
-  .bottom-section__holder {
+  .bottom-section__container {
     display: none;
   }
 }
@@ -637,12 +628,11 @@ body {
   .hidden-menu__logo {
     display: flex;
     width: 250px;
-    height: 50px;
-    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
   }
   .hidden-menu__logo img {
-    width: 100%;
-    height: 100%;
+    width: 250px;
   }
   .middle-section__button::before {
     display: inline-flex;
@@ -686,8 +676,22 @@ body {
   }
 }
 @media (max-width: 390px) {
+  .hidden-menu__logo {
+    width: 170px;
+    justify-content: flex-end;
+  }
+  .middle-section__button::before {
+    display: none;
+  }
+  .middle-section__container {
+    padding: 10px 15px;
+  }
   .purchases {
-    column-gap: 15px;
+    column-gap: 10px;
+  }
+  .purchases__icon {
+    width: 45px;
+    height: 45px;
   }
 }
 /*------------Inform-(Чат з менеджером сайту)---------*/
@@ -773,6 +777,7 @@ body {
   width: 100%;
   height: 100%;
   background: url("../img/main/popular/frame_bg.webp") bottom no-repeat, #fff;
+  transition: transform 0.4s;
 }
 .item-popular__image img {
   width: 100%;
@@ -876,7 +881,7 @@ body {
   border-radius: 8px;
 }
 @media (any-hover: hover) {
-  .item-product__image:hover {
+  .item-product:hover .item-product__image {
     transform: scale(1.1);
   }
 }
@@ -884,11 +889,13 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  flex-grow: 1;
 }
 .item-product__category a {
   white-space: wrap;
   margin-bottom: 10px;
 }
+
 .item-product__category p:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -1000,21 +1007,31 @@ body {
   flex-basis: 410px;
   border-radius: 8px;
 }
-@media (any-hover: hover) {
-  .item-stock:hover {
-    box-shadow: 0px 7px 15px #676464;
-  }
+.item-stock__inner {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
 }
-
 .item-stock__link {
   max-width: 410px;
   height: 100%;
+  border-radius: 8px;
+  transition: all 0.4s;
 }
 .item-stock__link img {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 8px;
+}
+@media (any-hover: hover) {
+  .item-stock:hover .item-stock__link {
+    box-shadow: inset 0px 7px 15px #676464;
+    transform: scale(1.1);
+  }
 }
 /*--------Section articles-----------*/
 .page__articles {
@@ -1054,15 +1071,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  transition: all 0.4s;
 }
-@media (any-hover: hover) {
-  .card-articles__item:hover .card-articles__image img {
-    transform: scale(1.06);
-  }
-}
-
 .card-articles__inner {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 100%;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -1070,6 +1084,7 @@ body {
   width: 100%;
   height: 270px;
   border-radius: 8px;
+  transition: all 0.4s;
 }
 .card-articles__image img {
   width: 100%;
@@ -1077,6 +1092,12 @@ body {
   vertical-align: top;
   border-radius: 8px;
 }
+@media (any-hover: hover) {
+  .card-articles__item:hover .card-articles__image {
+    transform: scale(1.06);
+  }
+}
+
 .card-articles__description {
   padding: 30px 30px 0 30px;
   font-size: 26px;
