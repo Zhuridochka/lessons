@@ -816,6 +816,11 @@ body {
 .page__container {
   padding-top: 290px;
 }
+@media (max-width: 890px) {
+  .page__container {
+    padding-top: 170px;
+  }
+}
 .page__popular {
   margin-bottom: 70px;
 }
