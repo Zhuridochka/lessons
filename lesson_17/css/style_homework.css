@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600&display=swap");
+
+@import url("reset.css");
+@import url("fonts.css");
+
+body {
+  font-family: "Integral CF", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fff;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1270px; /**обмежуючий контейнер+відступи*/
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*-------Header--------*/
+.header {
+}
+/*-------Main--------*/
+.homework {
+}
+.homework__style {
+  margin-top: 50px;
+}
+.style {
+}
+.style__container {
+  background-color: #f0f0f0;
+  border-radius: 40px;
+}
+.style__title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 70px;
+}
+.style__items {
+  height: 100%;
+  padding: 64px 64px 76px 64px;
+  display: grid;
+  grid-template: repeat(1, 289px) / 36.6% 61.5%;
+  grid-auto-rows: 289px;
+  gap: 20px;
+}
+.item-style {
+}
+.item-style__box {
+  position: relative;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.item-style__box:only-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.item-style__box:nth-child(3n + 1) {
+  grid-column: 61.5%;
+}
+.item-style__box:nth-child(4n + 1) {
+  grid-column: 36.6%;
+}
+.item-style__inner {
+}
+.item-style__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 407 / 289;
+}
+.item-style__image img {
+  border-radius: 20px;
+}
+.item-style__label {
+  position: absolute;
+  top: 25px;
+  left: 36px;
+  font-family: "Satoshi", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/*-------Footer--------*/
+.footer {
+}
