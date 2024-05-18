@@ -55,10 +55,12 @@ body {
 }
 .style__items {
   height: 100%;
-  padding: 64px 64px 76px 64px;
+  width: 100%;
+  padding: 64px 65px 76px 64px;
   display: grid;
-  grid-template-columns: 36.6% 30.8% 30.8%;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1.583fr 1fr 1.583fr;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
   gap: 20px;
 }
 .item-style {
@@ -68,38 +70,66 @@ body {
   border-radius: 20px;
   background-color: #fff;
 }
-@media (min-width: 948px) {
-  .item-style__box:nth-child(2),
-  .item-style__box:nth-child(3) {
-    grid-column: span 2;
-  }
-}
 .item-style__link,
 .item-style__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.item-style__image {
   border-radius: 20px;
+  aspect-ratio: 407 / 289;
 }
-.item-style__box:first-child .item-style__image,
+@media (min-width: 948px) {
+  .item-style__box:nth-child(2),
+  .item-style__box:nth-child(3) {
+    grid-column: span 2;
+  }
+  .item-style__box:nth-child(4n + 2) {
+    grid-column: span 2;
+  }
+  .item-style__box:nth-child(4n + 2) .item-style__link,
+  .item-style__box:nth-child(4n + 2) .item-style__image {
+    aspect-ratio: 684 / 289;
+  }
+  .item-style__box:nth-child(4n + 3) {
+    grid-column: span 2;
+  }
+  .item-style__box:nth-child(4n + 3) .item-style__link,
+  .item-style__box:nth-child(4n + 3) .item-style__image {
+    aspect-ratio: 684 / 289;
+  }
+  .item-style__box {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 947px) {
+  .style__items {
+    grid-template-columns: auto-fill, 1.583fr 1fr 1.583fr;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+  }
+  .item-style__box {
+    grid-column: span 3;
+  }
+}
+
+/* .item-style__box:first-child .item-style__image,
 .item-style__box:nth-child(4) .item-style__image {
   aspect-ratio: 407 / 289;
 }
 .item-style__box:nth-child(2) .item-style__image,
-.item-style__box:nth-child(2) .item-style__image {
+.item-style__box:nth-child(3) .item-style__image {
   aspect-ratio: 684 / 289;
-}
-.item-style__box:nth-child(4n + 2) {
+} */
+/* .item-style__box:nth-child(4n + 2) {
   grid-column: span 2;
 }
-.item-style__box:nth-child(6n + 1):not(:first-child) {
+.item-style__box:nth-child(4n + 3):not(:first-child) {
   grid-column: span 2;
 }
 .item-style__box {
   grid-column: span 1;
-}
+} */
 
 .item-style__label {
   position: absolute;
