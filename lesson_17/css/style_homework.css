@@ -344,7 +344,7 @@ body {
   display: flex;
   gap: 10px;
 }
-.purchases__icon {
+.price-item__icon {
   display: flex;
   flex: 0 0 50px;
   width: 50px;
@@ -352,7 +352,7 @@ body {
   transition: box-shadow 0.4s;
 }
 @media (any-hover: hover) {
-  .purchases__icon:hover {
+  .price-item__icon:hover {
     box-shadow: 0 0 15px #9e9b9b;
   }
 }
@@ -393,7 +393,7 @@ body {
   .price-item__purchases {
     gap: 20px;
   }
-  .purchases__icon {
+  .price-item__icon {
     flex: 0 0 70px;
     width: 70px;
     height: 70px;
