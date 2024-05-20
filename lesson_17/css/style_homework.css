@@ -258,7 +258,6 @@ body {
 }
 .item-product__image {
   overflow: hidden;
-  transition: transform 0.4s;
   margin-bottom: 20px;
   border-radius: 8px;
 }
@@ -270,6 +269,7 @@ body {
 }
 @media (any-hover: hover) {
   .item-product__image:hover img {
+    transition: transform 0.4s;
     transform: scale(1.1);
   }
 }
