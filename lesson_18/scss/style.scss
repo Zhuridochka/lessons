@@ -1,0 +1,288 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:regular&display=swap");
+
+// Локальне підключення шрифтів
+@import "_fonts.scss";
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+// Окремі сторінки
+// @import "_home.scss";
+// Окремі компоненти
+// @import "_header.scss";
+// @import "_footer.scss";
+// ...
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1512;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1303;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+
+body {
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #000001;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1303px; //! Oбмежуючий контейнер+відступи
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+//----Загальні стилі------
+%title-theme {
+  font-family: "Exo", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: math.div(70, 60);
+  text-transform: uppercase;
+}
+//========Header==========//
+.header {
+  &__container {
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    column-gap: toRem(50);
+  }
+}
+.menu {
+  &__logo {
+    white-space: nowrap;
+    font-family: "Exo 2", sans-serif;
+    text-transform: capitalize;
+    letter-spacing: -3px;
+    line-height: math.div(20, 30);
+    @include adaptiveValue("font-size", 30, 16);
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: toRem(10);
+    @include adaptiveValue("column-gap", 60, 20, 1512, 1150);
+    max-width: 794px;
+  }
+
+  &__item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #6f00a9;
+      }
+    }
+  }
+
+  &__link {
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: math.div(20, 16);
+    transition: all 1s;
+  }
+  &__social {
+  }
+
+  &__icon {
+  }
+}
+.social-menu {
+  display: flex;
+  flex: 0 0 100px;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 19px;
+  row-gap: toRem(10);
+  justify-content: flex-start;
+  &__item {
+  }
+
+  &__link {
+    width: 20px;
+    height: 20px;
+    transition: all 0.4s;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+.icon-menu {
+  display: none;
+}
+
+// ==========Home-section========//
+.page {
+  &__home {
+    position: relative;
+  }
+}
+
+.home-section {
+  &::before {
+    content: "";
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    top: -114px;
+    left: -150px;
+    border-radius: 480px;
+    opacity: 0.3;
+    background: linear-gradient(
+      90deg,
+      rgba(151, 0, 255, 0.6) 0%,
+      rgba(87, 255, 28, 0.6) 36.9%,
+      rgba(255, 0, 0, 0.6) 67.4%,
+      rgba(0, 56, 255, 0.6) 100%
+    );
+    filter: blur(50px);
+  }
+  &::after {
+    content: "";
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    bottom: -130px;
+    right: -76px;
+    border-radius: 480px;
+    opacity: 0.3;
+    background: linear-gradient(
+      90deg,
+      rgba(151, 0, 255, 0.6) 0%,
+      rgba(87, 255, 28, 0.6) 36.9%,
+      rgba(255, 0, 0, 0.6) 67.4%,
+      rgba(0, 56, 255, 0.6) 100%
+    );
+    filter: blur(50px);
+    z-index: 1;
+  }
+
+  &__container {
+    display: flex;
+    column-gap: 58px;
+  }
+  &__picture {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 688px;
+    height: 508px;
+    position: relative;
+    z-index: 3;
+    background: url("../img/main/home_section/Image__latter.png") left 22px
+        no-repeat,
+      url("../img/main/home_section/Image_latter_an.png") 520px 74px no-repeat,
+      url("../img/main/home_section/current_left.webp") left bottom no-repeat,
+      url("../img/main/home_section/current_right.webp") right bottom no-repeat;
+    & img {
+      height: 100%;
+      aspect-ratio: 376 / 508;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 0 1 584px;
+    width: 584px;
+    margin-top: 112px;
+  }
+
+  &__name {
+    display: inline-block;
+    max-width: 120px;
+    line-height: math.div(20, 18);
+    text-transform: uppercase;
+    letter-spacing: -0.36px;
+    &::after {
+      content: "";
+      display: block;
+      width: 126%;
+      height: 2px;
+      margin-top: toRem(10);
+      background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
+    }
+  }
+  &__title {
+    @extend %title-theme;
+    font-size: 80px;
+    line-height: math.div(70, 80);
+  }
+
+  &__text {
+    line-height: math.div(40, 18);
+    letter-spacing: -0.36px;
+    text-transform: capitalize;
+  }
+
+  &__button {
+  }
+}
+.button {
+  max-width: 255px;
+  display: inline-flex;
+  justify-content: center;
+  background: #6f00a9;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: normal;
+  padding: 15px 0;
+  text-align: center;
+  transition: all 0.4s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #0b0045;
+    }
+  }
+}
