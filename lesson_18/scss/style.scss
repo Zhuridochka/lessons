@@ -89,10 +89,10 @@ body {
     justify-content: space-between;
     padding-top: 60px;
     padding-bottom: 60px;
-    @include adaptiveValue("column-gap", 50, 30, 1920, 1180);
-    @media (max-width: toEm(1180)) {
-      padding-top: 30px;
-      padding-bottom: 30px;
+    @include adaptiveValue("column-gap", 50, 30, 0, 1920, 991.98);
+    @media (max-width: toEm(991.98)) {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }
@@ -101,19 +101,59 @@ body {
     white-space: nowrap;
     font-family: "Exo 2", sans-serif;
     text-transform: capitalize;
-    letter-spacing: -3px;
+    // letter-spacing: -3px;
     line-height: math.div(20, 30);
-    @include adaptiveValue("font-size", 30, 16);
+    @include adaptiveValue("font-size", 30, 16, 0, 1512, 393);
+    @include adaptiveValue("letter-spacing", -3, -1.6, 0, 1512, 393);
+    position: relative;
+    z-index: 5;
   }
   &__body {
+    @media (max-width: toEm(767.98)) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      transition: all 0.5s;
+      width: 100%;
+      height: 100%;
+      background: #000001;
+      opacity: 0.94;
+      z-index: 3;
+      overflow: auto;
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 70px;
+        width: 100%;
+        background-color: #000001;
+        z-index: 3;
+        .menu-open & {
+          right: 0;
+        }
+      }
+      .menu-open & {
+        right: 0;
+      }
+    }
   }
   &__list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+
     @include adaptiveValue("column-gap", 60, 20, 1512, 1150);
     max-width: 794px;
+    @media (max-width: toEm(767.98)) {
+      row-gap: 15px;
+      flex-direction: column;
+      padding-top: 80px;
+      align-items: flex-start;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
   &__item {
     padding: 10px;
@@ -124,6 +164,9 @@ body {
     &:hover {
       background-color: #6f00a9;
     }
+    @media (max-width: toEm(767.98)) {
+      padding: 5px;
+    }
   }
   &__link {
     font-family: "Orbitron", sans-serif;
@@ -132,6 +175,9 @@ body {
     font-weight: 500;
     line-height: math.div(20, 16);
     transition: all 1s;
+    @media (max-width: toEm(767.98)) {
+      font-size: toRem(25);
+    }
   }
   &__social {
   }
@@ -146,9 +192,9 @@ body {
   column-gap: 19px;
   row-gap: toRem(10);
   justify-content: flex-start;
+
   &__item {
   }
-
   &__link {
     width: 20px;
     height: 20px;
@@ -166,7 +212,7 @@ body {
 }
 .icon-menu {
   display: none;
-  @media (max-width: toEm(767)) {
+  @media (max-width: toEm(767.98)) {
     display: block;
     flex: 0 0 30px;
     height: 19px;
@@ -263,15 +309,17 @@ body {
     display: flex;
     justify-content: center;
     flex: 0 1 688px;
-    height: 508px;
+    max-height: 508px;
     position: relative;
+    max-width: 100%;
     & img:first-child {
-      height: 100%;
+      max-width: 100%;
       aspect-ratio: 376 / 508;
       object-fit: cover;
       z-index: 3;
     }
     & img:nth-child(2) {
+      max-width: 100%;
       position: absolute;
       bottom: 0px;
       left: -30px;
@@ -279,6 +327,7 @@ body {
       aspect-ratio: 315 / 353;
     }
     & img:nth-child(3) {
+      max-width: 100%;
       position: absolute;
       bottom: 0px;
       right: -20px;
@@ -286,6 +335,7 @@ body {
       aspect-ratio: 315 / 353;
     }
     & img:nth-child(4) {
+      max-width: 100%;
       position: absolute;
       top: 13.77%;
       right: 8.72%;
@@ -293,6 +343,7 @@ body {
       aspect-ratio: 70 / 88;
     }
     & img:nth-child(5) {
+      max-width: 100%;
       position: absolute;
       top: 4.33%;
       left: 3.63%;
@@ -320,23 +371,32 @@ body {
     &::after {
       content: "";
       display: block;
-      width: 126%;
+      width: 120%;
       height: 2px;
-      margin-top: toRem(10);
+      @include adaptiveValue("margin-top", 10, 4, 0, 1512, 393);
       background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
+      @media (max-width: toEm(767.98)) {
+        width: 90%;
+      }
+      // @media (max-width: toEm(393)) {
+      //   width: 100%;
+      // }
     }
     @include adaptiveValue("font-size", 18, 14, 0, 1512, 320);
   }
   &__title {
     @extend %title-theme;
-    line-height: math.div(70, 80);
-    @include adaptiveValue("font-size", 80, 30, 1, 1512, 320);
+    line-height: 87.5%; /* 70/80 */
+    @include adaptiveValue("font-size", 80, 30, 0, 1512, 320);
   }
   &__text {
     text-transform: capitalize;
+    line-height: 222.222222%; /* 40/18 */
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 2.22, 1.07, 0, 1512, 393);
     @include adaptiveValue("letter-spacing", -0.36, -0.26, 0, 1512, 393);
+    @media (max-width: toEm(393)) {
+      line-height: 107.142857%; /* 15/14 */
+    }
   }
   &__button {
   }
@@ -372,53 +432,53 @@ body {
   min-height: 100%;
   position: relative;
   overflow: hidden;
-  // &::before {
-  //   content: "";
-  //   top: -23.666667%; /* 142/600 */
-  //   left: -11.574074%; /* 175/1512 */
-  //   position: absolute;
-  //   @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
-  //   @include adaptiveValue("width", 480, 120, 0, 1512, 393);
-  //   @include adaptiveValue("height", 480, 120, 0, 1512, 393);
-  //   opacity: 0.3;
-  //   background: linear-gradient(
-  //     90deg,
-  //     rgba(151, 0, 255, 0.6) 0%,
-  //     rgba(87, 255, 28, 0.6) 36.9%,
-  //     rgba(255, 0, 0, 0.6) 67.4%,
-  //     rgba(0, 56, 255, 0.6) 100%
-  //   );
-  //   filter: blur(50px);
-  //   @media (max-width: toEm(393)) {
-  //     top: 10%;
-  //     left: 9.160305%; /* 36/393 */
-  //   }
-  // }
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: -23.833333%; /* -143/600 */
-  //   right: -7.60582%; /* -115/1512 */
-  //   @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
-  //   @include adaptiveValue("width", 480, 120, 0, 1512, 393);
-  //   @include adaptiveValue("height", 480, 120, 0, 1512, 393);
-  //   opacity: 0.3;
-  //   background: linear-gradient(
-  //     90deg,
-  //     rgba(151, 0, 255, 0.6) 0%,
-  //     rgba(87, 255, 28, 0.6) 36.9%,
-  //     rgba(255, 0, 0, 0.6) 67.4%,
-  //     rgba(0, 56, 255, 0.6) 100%
-  //   );
-  //   filter: blur(50px);
-  //   z-index: 1;
-  //   @media (max-width: toEm(393)) {
-  //     bottom: 10%;
-  //     right: 8.905852%; /* 35/393 */
-  //   }
-  // }
+  &::before {
+    content: "";
+    top: -23.666667%; /* 142/600 */
+    left: -11.574074%; /* 175/1512 */
+    position: absolute;
+    @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
+    @include adaptiveValue("width", 480, 120, 0, 1512, 393);
+    @include adaptiveValue("height", 480, 120, 0, 1512, 393);
+    opacity: 0.3;
+    background: linear-gradient(
+      90deg,
+      rgba(151, 0, 255, 0.6) 0%,
+      rgba(87, 255, 28, 0.6) 36.9%,
+      rgba(255, 0, 0, 0.6) 67.4%,
+      rgba(0, 56, 255, 0.6) 100%
+    );
+    filter: blur(50px);
+    @media (max-width: toEm(393)) {
+      top: 10%;
+      left: 9.160305%; /* 36/393 */
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -23.833333%; /* -143/600 */
+    right: -7.60582%; /* -115/1512 */
+    @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
+    @include adaptiveValue("width", 480, 120, 0, 1512, 393);
+    @include adaptiveValue("height", 480, 120, 0, 1512, 393);
+    opacity: 0.3;
+    background: linear-gradient(
+      90deg,
+      rgba(151, 0, 255, 0.6) 0%,
+      rgba(87, 255, 28, 0.6) 36.9%,
+      rgba(255, 0, 0, 0.6) 67.4%,
+      rgba(0, 56, 255, 0.6) 100%
+    );
+    filter: blur(50px);
+    z-index: 1;
+    @media (max-width: toEm(393)) {
+      bottom: 10%;
+      right: 8.905852%; /* 35/393 */
+    }
+  }
   &__container {
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -449,14 +509,14 @@ body {
       align-self: center;
       width: 40%;
       height: 2px;
-      margin-top: toRem(20);
+      @include adaptiveValue("margin-top", 20, 4, 0, 1512, 393);
       background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
     }
   }
   &__text {
     max-width: toRem(992);
     text-align: center;
-    line-height: math.div(40, 18);
+    line-height: 222.222222%; /* 40/18 */
     letter-spacing: -0.36px;
     text-transform: capitalize;
     &:not(:last-child) {
@@ -465,19 +525,18 @@ body {
     @include adaptiveValue("font-size", 18, 14, 0, 1512, 393);
     @media (max-width: toEm(393)) {
       letter-spacing: -0.28px;
-      line-height: 30/14;
+      line-height: 214.285714%; /* 30/14 */
     }
   }
   &__bottom {
-    overflow-x: auto;
   }
   &__list {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: toRem(20);
-    // flex-wrap: wrap;
+    overflow-x: auto;
+    overflow-y: clip;
   }
   &__item {
     display: flex;
@@ -488,7 +547,8 @@ body {
       height: 10px;
       border-radius: 50%;
       background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
-      margin-left: toRem(40);
+      // margin-left: toRem(40);
+      @include adaptiveValue("margin-left", 40, 25, 0, 1512, 393);
     }
   }
   &__link {
@@ -496,18 +556,19 @@ body {
     font-weight: 500;
     text-transform: capitalize;
     white-space: nowrap;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.4s;
     @include adaptiveValue("font-size", 20, 14, 0, 1512, 393);
     @include adaptiveValue("line-height", 125%, 107%, 0, 1512, 393);
+    @include adaptiveValue("padding", 10, 5, 0, 1512, 393);
     &:hover {
       background-color: #6f00a9;
     }
   }
 }
+
 // ==========Portfolio-section========//
 .portfolio-section {
   position: relative;
@@ -574,6 +635,10 @@ body {
       height: 2px;
       margin-top: toRem(20);
       background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
+      @include adaptiveValue("margin-top", 20, 4, 0, 1512, 393);
+      // @media (max-width: toEm(393)) {
+      //   width: 112%;
+      // }
     }
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 120, 20, 0, 1512, 393);
@@ -586,15 +651,23 @@ body {
   display: flex;
   gap: 40px;
   overflow-x: auto;
+  overflow-y: clip;
+  @include adaptiveValue("gap", 40, 21, 0, 1512, 393);
   &__item {
-    .images-portfolio__video:first-of-type::before {
-      opacity: 0.5;
-    }
   }
 }
 .item-portfolio {
   flex-shrink: 0;
   flex-basis: 360px;
+  @media (max-width: toEm(997.98)) {
+    flex-basis: 300px;
+  }
+  @media (max-width: toEm(620)) {
+    flex-basis: 250px;
+  }
+  @media (max-width: toEm(393)) {
+    flex-basis: 193px;
+  }
   &__body {
     display: flex;
     flex-direction: column;
@@ -613,8 +686,6 @@ body {
 .images-portfolio {
   display: flex;
   position: relative;
-  // flex-basis: 360px;
-  // flex-shrink: 1;
 
   &__video {
     display: flex;
@@ -633,44 +704,49 @@ body {
       width: 100%;
       height: 100%;
       background-color: #000;
-      // opacity: 0.5;
+      opacity: 0.5;
     }
-    &:first-child::before {
-      opacity: 0.8;
+    .item-portfolio:first-child & {
+      &::before {
+        opacity: 0.8;
+      }
     }
   }
   &__button {
     display: flex;
     flex-direction: column;
     position: absolute;
-    // align-items: center;
-    top: 26.388889%; /* 95/360 */
-    left: 26.388889%; /* 68/360 */
+    top: 50%;
+    left: 0;
     flex: 0 0 225px;
-
+    width: 100%;
+    transform: translateY(-50%);
     row-gap: 10px;
-    flex-direction: column;
-
     & img {
-      align-self: center;
-      justify-self: center;
+      display: inline-flex;
       flex: 0 1 120px;
-
-      cursor: pointer;
-      transition: transform 0.4s;
+      width: 120px;
+      align-self: center;
+      @media (max-width: toEm(767.98)) {
+        flex: 0 1 85px;
+        width: 85px;
+      }
+      @media (max-width: toEm(393)) {
+        flex: 0 1 65px;
+        width: 65px;
+      }
     }
     &:hover p {
       display: block;
-      color: greenyellow;
     }
     & p {
-      // display: none;
+      display: none;
       text-align: center;
       vertical-align: middle;
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
-      // max-width: 100%;
+      max-width: 100%;
       transition: all 0.4s;
       @include adaptiveValue("font-size", 40, 14, 0, 1512, 393);
     }
