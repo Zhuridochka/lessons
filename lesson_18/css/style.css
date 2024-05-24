@@ -386,7 +386,7 @@ body {
     height: 100%;
     background: #000001;
     opacity: 0.94;
-    z-index: 3;
+    z-index: 4;
     overflow: auto;
   }
   .menu__body::before {
@@ -397,7 +397,7 @@ body {
     height: 70px;
     width: 100%;
     background-color: #000001;
-    z-index: 3;
+    z-index: 4;
   }
   .menu-open .menu__body::before {
     right: 0;
@@ -781,10 +781,8 @@ body {
           flex: 0 1 688px;
   max-height: 508px;
   position: relative;
-  max-width: 100%;
 }
 .home-section__picture img:first-child {
-  max-width: 100%;
   aspect-ratio: 376/508;
   -o-object-fit: cover;
      object-fit: cover;
