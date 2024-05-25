@@ -1803,24 +1803,24 @@ body {
 }
 @media (min-width: 94.5em) {
   .about-section__link {
-    line-height: 7.8125%rem;
+    line-height: 0.078125rem;
   }
 }
 @media (min-width: 24.5625em) and (max-width: 94.5em) {
-  @supports (line-height: clamp( 6.6875%rem , 6.2923927614%rem  +  1.6085790885%vw , 7.8125%rem )) {
+  @supports (line-height: clamp( 0.066875rem , 0.0629239276rem  +  0.0160857909vw , 0.078125rem )) {
     .about-section__link {
-      line-height: clamp( 6.6875%rem , 6.2923927614%rem  +  1.6085790885%vw , 7.8125%rem );
+      line-height: clamp( 0.066875rem , 0.0629239276rem  +  0.0160857909vw , 0.078125rem );
     }
   }
-  @supports not (line-height: clamp( 6.6875%rem , 6.2923927614%rem  +  1.6085790885%vw , 7.8125%rem )) {
+  @supports not (line-height: clamp( 0.066875rem , 0.0629239276rem  +  0.0160857909vw , 0.078125rem )) {
     .about-section__link {
-      line-height: calc(6.6875%rem + 1.125% * (100vw - 24.5625rem) / 69.9375);
+      line-height: calc(0.066875rem + 0.01125 * (100vw - 24.5625rem) / 69.9375);
     }
   }
 }
 @media (max-width: 24.5625em) {
   .about-section__link {
-    line-height: 6.6875%rem;
+    line-height: 0.066875rem;
   }
 }
 @media (min-width: 94.5em) {
