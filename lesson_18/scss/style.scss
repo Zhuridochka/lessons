@@ -538,7 +538,6 @@ body {
     }
   }
   &__container {
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -621,7 +620,7 @@ body {
     justify-content: center;
     transition: background-color 0.4s;
     @include adaptiveValue("font-size", 20, 14, 0, 1512, 393);
-    @include adaptiveValue("line-height", 125%, 107%, 0, 1512, 393);
+    @include adaptiveValue("line-height", 1.25, 1.07, 0, 1512, 393);
     @include adaptiveValue("padding", 10, 5, 0, 1512, 393);
   }
 }
