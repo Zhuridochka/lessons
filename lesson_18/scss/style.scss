@@ -65,10 +65,14 @@ body {
 //----Загальні стилі------//
 .page {
   &__home {
+    padding-top: 150px;
     @include adaptiveValue("margin-bottom", 80, 20, 0, 1512, 393);
+    @media (max-width: toEm(767.98)) {
+      padding-top: toRem(80);
+    }
   }
   &__about {
-    @include adaptiveValue("margin-bottom", 200, 75, 0, 1512, 393);
+    @include adaptiveValue("margin-bottom", 200, 80, 0, 1512, 393);
   }
   &__portfolio {
     @include adaptiveValue("margin-bottom", 200, 75, 0, 1512, 393);
@@ -84,6 +88,12 @@ body {
 }
 //========Header==========//
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000001;
+  z-index: 50;
   &__container {
   }
 
@@ -92,7 +102,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     @include adaptiveValue("column-gap", 50, 30, 0, 1920, 991.98);
     @media (max-width: toEm(991.98)) {
       padding-top: 40px;
@@ -319,48 +329,67 @@ body {
     min-height: 147px;
     position: relative;
     min-width: 110px;
+  }
 
-    &__img-man {
-      max-width: 100%;
-      aspect-ratio: 376 / 508;
-      object-fit: cover;
-      z-index: 3;
+  &__img-man {
+    width: 100%;
+    @include adaptiveValue("width", 376, 177, 0, 1512, 393);
+    @include adaptiveValue("height", 508, 280, 0, 1512, 393);
+    object-fit: cover;
+    z-index: 3;
+  }
+  &__current-left {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    @include adaptiveValue("width", 315, 97, 0, 1512, 393);
+    @include adaptiveValue("height", 355, 109, 0, 1512, 393);
+    @media (max-width: toEm(767.98)) {
+      width: 100%;
     }
-    &__current-left {
-      max-width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-      @include adaptiveValue("width", 315, 97, 0, 1512, 393);
-      @include adaptiveValue("height", 355, 109, 0, 1512, 393);
+    @media (max-width: toEm(500)) {
+      transform: translateX(0%);
     }
-    &__current-right {
-      max-width: 100%;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 2;
-      @include adaptiveValue("width", 286, 90, 0, 1512, 393);
-      @include adaptiveValue("height", 321, 109, 0, 1512, 393);
+  }
+  &__current-right {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    @include adaptiveValue("width", 286, 90, 0, 1512, 393);
+    @include adaptiveValue("height", 321, 109, 0, 1512, 393);
+    @media (max-width: toEm(767.98)) {
+      display: none;
     }
-    &__latter-ae {
-      position: absolute;
-      top: 13.77%;
-      right: 8.72%;
-      z-index: 2;
-      transform: rotate(30deg);
-      @include adaptiveValue("width", 70, 28, 0, 1512, 393);
-      @include adaptiveValue("height", 88, 34, 0, 1512, 393);
+  }
+  &__latter-ae {
+    position: absolute;
+    top: 13.77%;
+    right: 8.72%;
+    z-index: 2;
+    transform: rotate(30deg);
+    @include adaptiveValue("width", 70, 20, 0, 1512, 393);
+    @include adaptiveValue("height", 88, 28, 0, 1512, 393);
+    @media (max-width: toEm(767.98)) {
+      top: 21.022727%; /* 37/176 */
+      // right: 46.391753%; /* 45/97 */
+      transform: rotate(18deg);
     }
-    &__latter-pr {
-      position: absolute;
-      top: 4.33%;
-      left: 3.63%;
-      z-index: 2;
-      transform: rotate(-45deg);
-      @include adaptiveValue("width", 110, 50, 0, 1512, 393);
-      @include adaptiveValue("height", 136, 61, 0, 1512, 393);
+  }
+  &__latter-pr {
+    position: absolute;
+    top: 4.33%;
+    left: 3.63%;
+    z-index: 2;
+    transform: rotate(-45deg);
+    @include adaptiveValue("width", 110, 28, 0, 1512, 393);
+    @include adaptiveValue("height", 136, 34, 0, 1512, 393);
+    @media (max-width: toEm(767.98)) {
+      top: 11.3%;
+      transform: rotate(-15deg);
     }
   }
   &__content {
@@ -415,13 +444,13 @@ body {
   }
   &__size767 {
     display: none;
-    display: flex;
-    flex-direction: column;
-    margin-top: toRem(40);
-    align-items: center;
-    row-gap: toRem(40);
     @media (max-width: toEm(767.98)) {
       display: block;
+      display: flex;
+      flex-direction: column;
+      margin-top: toRem(40);
+      align-items: center;
+      row-gap: toRem(40);
     }
   }
 }
@@ -456,6 +485,13 @@ body {
   min-height: 100%;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(
+      87deg,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("../img/main/about_section/about_section_background.webp") 0 0 / cover
+      no-repeat;
   &::before {
     content: "";
     top: -23.666667%; /* 142/600 */
@@ -511,7 +547,7 @@ body {
     position: relative;
     z-index: 2;
     @include adaptiveValue("padding-top", 120, 0, 0, 1512, 393);
-    @include adaptiveValue("padding-bottom", 120, 20, 0, 1512, 393);
+    @include adaptiveValue("padding-bottom", 120, 0, 0, 1512, 393);
     @media (max-width: toEm(393)) {
       padding-right: toRem(30);
       padding-left: toRem(30);
@@ -544,7 +580,7 @@ body {
     letter-spacing: -0.36px;
     text-transform: capitalize;
     &:not(:last-child) {
-      margin-bottom: toRem(60);
+      @include adaptiveValue("margin-bottom", 60, 20, 0, 1512, 393);
     }
     @include adaptiveValue("font-size", 18, 14, 0, 1512, 393);
     @media (max-width: toEm(393)) {
@@ -587,9 +623,6 @@ body {
     @include adaptiveValue("font-size", 20, 14, 0, 1512, 393);
     @include adaptiveValue("line-height", 125%, 107%, 0, 1512, 393);
     @include adaptiveValue("padding", 10, 5, 0, 1512, 393);
-    &:hover {
-      background-color: #6f00a9;
-    }
   }
 }
 
