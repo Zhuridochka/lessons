@@ -84,7 +84,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   @include adaptiveValue("font-size", 60, 24, 0, 1512, 393);
-  @include adaptiveValue("line-height", 116.666667%, 125%, 0, 1512, 393);
+  @include adaptiveValue("line-height", 1.16, 1.25, 0, 1512, 393);
 }
 //========Header==========//
 .header {
