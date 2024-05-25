@@ -263,24 +263,24 @@ body {
 }
 @media (min-width: 94.5em) {
   .portfolio-section__title, .about-section__title, .home-section__title {
-    line-height: 7.2916666875%rem;
+    line-height: 0.0725rem;
   }
 }
 @media (min-width: 24.5625em) and (max-width: 94.5em) {
-  @supports (line-height: clamp( 7.2916666875%rem , 7.9954200106%rem  +  -0.7447125112%vw , 7.8125%rem )) {
+  @supports (line-height: clamp( 0.0725rem , 0.0801005362rem  +  -0.0080428954vw , 0.078125rem )) {
     .portfolio-section__title, .about-section__title, .home-section__title {
-      line-height: clamp( 7.2916666875%rem , 7.9954200106%rem  +  -0.7447125112%vw , 7.8125%rem );
+      line-height: clamp( 0.0725rem , 0.0801005362rem  +  -0.0080428954vw , 0.078125rem );
     }
   }
-  @supports not (line-height: clamp( 7.2916666875%rem , 7.9954200106%rem  +  -0.7447125112%vw , 7.8125%rem )) {
+  @supports not (line-height: clamp( 0.0725rem , 0.0801005362rem  +  -0.0080428954vw , 0.078125rem )) {
     .portfolio-section__title, .about-section__title, .home-section__title {
-      line-height: calc(7.8125%rem + -0.5208333125% * (100vw - 24.5625rem) / 69.9375);
+      line-height: calc(0.078125rem + -0.005625 * (100vw - 24.5625rem) / 69.9375);
     }
   }
 }
 @media (max-width: 24.5625em) {
   .portfolio-section__title, .about-section__title, .home-section__title {
-    line-height: 7.8125%rem;
+    line-height: 0.078125rem;
   }
 }
 
