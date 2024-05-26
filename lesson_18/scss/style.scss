@@ -494,7 +494,6 @@ body {
 }
 // ==========About-section========//
 .about-section {
-  min-height: 100%;
   position: relative;
   background: linear-gradient(
       180deg,
@@ -504,13 +503,12 @@ body {
     url("../img/main/about_section/about_section_background.webp") 0 0 / cover
       no-repeat;
   &__container {
+    max-width: 1182px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
-    z-index: 2;
     @include adaptiveValue("padding-top", 120, 0, 0, 1512, 393);
     @include adaptiveValue("padding-bottom", 120, 0, 0, 1512, 393);
     @media (max-width: toEm(393)) {
@@ -557,10 +555,10 @@ body {
   }
   &__list {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     column-gap: toRem(20);
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: clip;
   }
   &__item {
