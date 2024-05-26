@@ -497,57 +497,12 @@ body {
   min-height: 100%;
   position: relative;
   background: linear-gradient(
-      87deg,
-      rgba(0, 0, 0, 1) 90%,
-      rgba(0, 0, 0, 1) 100%
+      180deg,
+      hsla(0, 0%, 0%, 0.902) 0%,
+      hsla(0, 0%, 0%, 0.988) 85.54%
     ),
     url("../img/main/about_section/about_section_background.webp") 0 0 / cover
       no-repeat;
-  &::before {
-    content: "";
-    top: -23.666667%; /* 142/600 */
-    left: -11.574074%; /* 175/1512 */
-    position: absolute;
-    @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
-    @include adaptiveValue("width", 480, 120, 0, 1512, 393);
-    @include adaptiveValue("height", 480, 120, 0, 1512, 393);
-    opacity: 0.3;
-    background: linear-gradient(
-      90deg,
-      rgba(151, 0, 255, 0.6) 0%,
-      rgba(87, 255, 28, 0.6) 36.9%,
-      rgba(255, 0, 0, 0.6) 67.4%,
-      rgba(0, 56, 255, 0.6) 100%
-    );
-    filter: blur(50px);
-    @media (max-width: toEm(393)) {
-      top: 10%;
-      left: 9.160305%; /* 36/393 */
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -23.833333%; /* -143/600 */
-    right: -7.60582%; /* -115/1512 */
-    @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
-    @include adaptiveValue("width", 480, 120, 0, 1512, 393);
-    @include adaptiveValue("height", 480, 120, 0, 1512, 393);
-    opacity: 0.3;
-    background: linear-gradient(
-      90deg,
-      rgba(151, 0, 255, 0.6) 0%,
-      rgba(87, 255, 28, 0.6) 36.9%,
-      rgba(255, 0, 0, 0.6) 67.4%,
-      rgba(0, 56, 255, 0.6) 100%
-    );
-    filter: blur(50px);
-    z-index: 1;
-    @media (max-width: toEm(393)) {
-      bottom: 10%;
-      right: 8.905852%; /* 35/393 */
-    }
-  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -642,8 +597,7 @@ body {
 // ==========Portfolio-section========//
 .portfolio-section {
   position: relative;
-  background: url("../img/main/portfolio_section/BG.webp") top center / 1397px
-    no-repeat;
+
   &__container {
     position: relative;
     z-index: 2;
@@ -674,6 +628,14 @@ body {
     }
   }
   &__previues {
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .previues-portfolio {
