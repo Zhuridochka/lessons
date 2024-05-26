@@ -79,6 +79,33 @@ body {
   }
 }
 
+.button {
+  max-width: 255px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #6f00a9;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 15px 0px;
+  text-align: center;
+  transition: background-color 0.8s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #0b0045;
+    }
+  }
+  @media (max-width: toEm(393)) {
+    max-width: 175px;
+    padding: 8px 0px;
+    font-size: 14px;
+    line-height: 142.857143%; /* 20/14 */
+  }
+}
+//========Шаблони==========//
+
 %title-theme {
   font-family: "Exo", sans-serif;
   font-weight: 700;
@@ -335,7 +362,6 @@ body {
     position: relative;
     min-width: 110px;
   }
-
   &__img-man {
     width: 100%;
     @include adaptiveValue("width", 376, 177, 0, 1512, 393);
@@ -403,6 +429,8 @@ body {
     flex: 0 1 584px;
     width: 584px;
     gap: 20px;
+    position: relative;
+    z-index: 3;
     @include adaptiveValue("margin-top", 112, 23, 0, 1512, 393);
     @media (max-width: toEm(393)) {
       gap: 12px;
@@ -459,39 +487,15 @@ body {
       margin-top: toRem(40);
       align-items: center;
       row-gap: toRem(40);
+      position: relative;
+      z-index: 3;
     }
-  }
-}
-.button {
-  max-width: 255px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #6f00a9;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
-  padding: 15px 0px;
-  text-align: center;
-  transition: background-color 0.8s;
-  @media (any-hover: hover) {
-    &:hover {
-      background-color: #0b0045;
-    }
-  }
-  @media (max-width: toEm(393)) {
-    max-width: 175px;
-    padding: 8px 0px;
-    font-size: 14px;
-    line-height: 142.857143%; /* 20/14 */
   }
 }
 // ==========About-section========//
 .about-section {
   min-height: 100%;
   position: relative;
-  overflow: hidden;
   background: linear-gradient(
       87deg,
       rgba(0, 0, 0, 1) 90%,
@@ -547,10 +551,10 @@ body {
   &__container {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
     z-index: 2;
     @include adaptiveValue("padding-top", 120, 0, 0, 1512, 393);
     @include adaptiveValue("padding-bottom", 120, 0, 0, 1512, 393);
