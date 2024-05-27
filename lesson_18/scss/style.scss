@@ -509,6 +509,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    width: 100%;
     @include adaptiveValue("padding-top", 120, 0, 0, 1512, 393);
     @include adaptiveValue("padding-bottom", 120, 0, 0, 1512, 393);
     @media (max-width: toEm(393)) {
@@ -553,13 +554,30 @@ body {
   }
   &__bottom {
   }
+  &__wrap {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__content {
+    display: inline-block;
+    // padding-left: 100%;
+    animation: marquee 10s linear infinite;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
   &__list {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     column-gap: toRem(20);
-    overflow-x: scroll;
-    overflow-y: clip;
   }
   &__item {
     display: flex;
@@ -570,7 +588,6 @@ body {
       height: 10px;
       border-radius: 50%;
       background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
-      // margin-left: toRem(40);
       @include adaptiveValue("margin-left", 40, 25, 0, 1512, 393);
     }
   }
@@ -580,8 +597,6 @@ body {
     text-transform: capitalize;
     white-space: nowrap;
     display: flex;
-    align-items: center;
-    justify-content: center;
     transition: background-color 0.4s;
     line-height: 1.25;
     @include adaptiveValue("font-size", 20, 14, 0, 1512, 393);
