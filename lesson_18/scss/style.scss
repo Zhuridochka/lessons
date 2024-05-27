@@ -32,7 +32,9 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // ==========================================================
-
+html {
+  scroll-behavior: smooth; //Для плавної прокрутки по target до потрібної секції
+}
 body {
   font-family: "Exo", sans-serif;
   font-weight: 400;
