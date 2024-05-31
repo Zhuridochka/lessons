@@ -33,7 +33,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 // ==========================================================
 html {
-  scroll-behavior: smooth; //Для плавної прокрутки по target до потрібної секції
+  scroll-behavior: smooth; //Плавна прокрутка по target до потрібної секції
 }
 body {
   font-family: "Exo", sans-serif;
@@ -53,9 +53,9 @@ body {
   flex-direction: column;
   position: relative;
   background-color: #000001;
-}
-.wrapper > main {
-  flex-grow: 1;
+  & > main {
+    flex-grow: 1;
+  }
 }
 
 [class*="__container"] {
@@ -91,19 +91,19 @@ body {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 900;
-  padding: 15px 0px;
+  padding: 15px 40px;
   text-align: center;
   transition: background-color 0.8s;
+  @media (max-width: toEm(393)) {
+    max-width: 175px;
+    padding: 8px 40px;
+    font-size: 14px;
+    line-height: 1.428571; /* 20/14 */
+  }
   @media (any-hover: hover) {
     &:hover {
       background-color: #0b0045;
     }
-  }
-  @media (max-width: toEm(393)) {
-    max-width: 175px;
-    padding: 8px 0px;
-    font-size: 14px;
-    line-height: 142.857143%; /* 20/14 */
   }
 }
 //========Шаблони==========//
@@ -123,7 +123,7 @@ body {
 }
 //========Header==========//
 .header {
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -266,7 +266,7 @@ body {
     height: 19px;
     position: relative;
     z-index: 5;
-    & span,
+    span,
     &::before,
     &::after {
       content: "";
@@ -292,8 +292,8 @@ body {
         margin-bottom: -1.5px;
       }
     }
-    & span {
-      top: calc(50% - 1px);
+    span {
+      top: calc(50% - 2px);
       .menu-open & {
         transform: scale(0);
       }
@@ -304,10 +304,9 @@ body {
 .home-section {
   position: relative;
   overflow: hidden;
-  &::before {
+  &::before,
+  &::after {
     content: "";
-    top: -19%;
-    left: -9.9%;
     position: absolute;
     @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
     @include adaptiveValue("width", 480, 120, 0, 1512, 393);
@@ -321,28 +320,18 @@ body {
       rgba(0, 56, 255, 0.6) 100%
     );
     filter: blur(50px);
+  }
+  &::before {
+    top: -19%;
+    left: -9.9%;
     @media (max-width: toEm(393)) {
       top: 10%;
       left: 9.2%;
     }
   }
   &::after {
-    content: "";
-    position: absolute;
     bottom: -22.5%; /* 135/600 */
     right: -4.89418%; /* -74/1512 */
-    @include adaptiveValue("border-radius", 480, 120, 0, 1512, 393);
-    @include adaptiveValue("width", 480, 120, 0, 1512, 393);
-    @include adaptiveValue("height", 480, 120, 0, 1512, 393);
-    opacity: 0.3;
-    background: linear-gradient(
-      90deg,
-      rgba(151, 0, 255, 0.6) 0%,
-      rgba(87, 255, 28, 0.6) 36.9%,
-      rgba(255, 0, 0, 0.6) 67.4%,
-      rgba(0, 56, 255, 0.6) 100%
-    );
-    filter: blur(50px);
     z-index: 1;
     @media (max-width: toEm(393)) {
       bottom: 10%;
@@ -359,27 +348,24 @@ body {
     display: flex;
     justify-content: center;
     flex: 0 1 688px;
-    max-height: 508px;
-    min-height: 147px;
     position: relative;
-    min-width: 110px;
   }
   &__img-man {
-    width: 100%;
-    @include adaptiveValue("width", 376, 177, 0, 1512, 393);
-    @include adaptiveValue("height", 508, 280, 0, 1512, 393);
+    width: 54.651163%; /* 376/688 */
+    aspect-ratio: 376 / 508;
     object-fit: cover;
+    position: relative;
     z-index: 3;
   }
   &__current-left {
-    max-width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 2;
-    @include adaptiveValue("width", 315, 97, 0, 1512, 393);
-    @include adaptiveValue("height", 355, 109, 0, 1512, 393);
+    width: 45.784884%; /* 315/688 */
+    aspect-ratio: 315 / 377;
     @media (max-width: toEm(767.98)) {
+      justify-self: flex-end;
       width: 100%;
     }
     @media (max-width: toEm(500)) {
@@ -387,13 +373,12 @@ body {
     }
   }
   &__current-right {
-    max-width: 100%;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 2;
-    @include adaptiveValue("width", 286, 90, 0, 1512, 393);
-    @include adaptiveValue("height", 321, 109, 0, 1512, 393);
+    width: 41.569767%; /* 286/688 */
+    aspect-ratio: 286 / 321;
     @media (max-width: toEm(767.98)) {
       display: none;
     }
@@ -404,11 +389,10 @@ body {
     right: 8.72%;
     z-index: 2;
     transform: rotate(30deg);
-    @include adaptiveValue("width", 70, 20, 0, 1512, 393);
-    @include adaptiveValue("height", 88, 28, 0, 1512, 393);
+    width: 10.174419%; /* 70/688 */
+    aspect-ratio: 70 / 88;
     @media (max-width: toEm(767.98)) {
       top: 21.022727%; /* 37/176 */
-      // right: 46.391753%; /* 45/97 */
       transform: rotate(18deg);
     }
   }
@@ -418,8 +402,9 @@ body {
     left: 3.63%;
     z-index: 2;
     transform: rotate(-45deg);
-    @include adaptiveValue("width", 110, 28, 0, 1512, 393);
-    @include adaptiveValue("height", 136, 34, 0, 1512, 393);
+    width: 15.988372%; /* 110/688 */
+    aspect-ratio: 110 / 136;
+    // object-fit: contain;
     @media (max-width: toEm(767.98)) {
       top: 11.3%;
       transform: rotate(-15deg);
@@ -455,9 +440,6 @@ body {
       @media (max-width: toEm(767.98)) {
         width: 90%;
       }
-      // @media (max-width: toEm(393)) {
-      //   width: 100%;
-      // }
     }
     @include adaptiveValue("font-size", 18, 14, 0, 1512, 320);
   }
@@ -561,10 +543,8 @@ body {
     overflow: hidden;
     white-space: nowrap;
   }
-
   &__content {
     display: inline-block;
-    // padding-left: 100%;
     animation: marquee 10s linear infinite;
   }
   @keyframes marquee {
@@ -608,7 +588,6 @@ body {
     }
   }
 }
-
 // ==========Portfolio-section========//
 .portfolio-section {
   position: relative;
@@ -622,7 +601,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: flex-start;
+    align-items: flex-start;
     max-width: toRem(427);
     width: 100%;
     @include adaptiveValue("row-gap", 20, 4, 0, 1512, 393);
@@ -690,15 +669,18 @@ body {
     @include adaptiveValue("font-size", 40, 14, 0, 1512, 393);
     transition: all 0.8s;
   }
-  &:hover p {
-    display: block;
-  }
-  &:hover .images-portfolio {
-    border: 7px solid #9700ff;
-  }
-  &:hover .images-portfolio {
-    &__video::before {
-      opacity: 0.8;
+  &:hover {
+    p {
+      opacity: 1;
+      visibility: visible;
+    }
+    .images-portfolio {
+      border: 7px solid #9700ff;
+    }
+    .images-portfolio {
+      &__video::before {
+        opacity: 0.8;
+      }
     }
   }
   &:hover &__signature {
@@ -708,16 +690,11 @@ body {
 .images-portfolio {
   display: flex;
   position: relative;
+  transition: all 0.8s;
   &__video {
     display: flex;
     position: relative;
     transition: all 0.8s;
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 360 / 360;
-    }
     &::before {
       content: "";
       position: absolute;
@@ -727,6 +704,12 @@ body {
       height: 100%;
       background-color: #000;
       opacity: 0.5;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 360 / 360;
     }
   }
   &__button {
@@ -739,7 +722,7 @@ body {
     width: 100%;
     transform: translateY(-50%);
     row-gap: 10px;
-    & img {
+    img {
       display: inline-flex;
       flex: 0 1 120px;
       width: 120px;
@@ -753,8 +736,9 @@ body {
         width: 65px;
       }
     }
-    & p {
-      display: none;
+    p {
+      opacity: 0;
+      visibility: hidden;
       text-align: center;
       vertical-align: middle;
       font-size: 14px;
