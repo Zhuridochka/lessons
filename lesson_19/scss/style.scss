@@ -102,8 +102,10 @@ body {
   color: var(--whiteColor);
   transition: all 0.4s;
   text-transform: capitalize;
-  &:hover {
-    background-color: var(--primaryColor);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--primaryColor);
+    }
   }
 }
 .offers {
@@ -198,12 +200,12 @@ body {
     position: relative;
     z-index: 2;
     transition: all 0.4s;
-
-    &:hover {
-      outline: toRem(1) solid var(--primaryColor);
-      border-radius: toRem(8);
-      box-shadow: inset 0px 0px 4px #bab6b6;
-      // transition: all 0.2s;
+    @media (any-hover: hover) {
+      &:hover {
+        outline: toRem(1) solid var(--primaryColor);
+        border-radius: toRem(8);
+        box-shadow: inset 0px 0px 4px #bab6b6;
+      }
     }
     &:has(> .entry:focus) {
       outline: toRem(1) solid var(--primaryColor);
@@ -613,10 +615,12 @@ body {
         grid-row: span 4;
       }
     }
-    &:hover {
-      .catalog-brand__info {
-        opacity: 1;
-        visibility: visible;
+    @media (any-hover: hover) {
+      &:hover {
+        .catalog-brand__info {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
@@ -664,10 +668,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: toRem(18);
-    &:hover {
-      .newsletter-section__info {
-        opacity: 1;
-        visibility: visible;
+    @media (any-hover: hover) {
+      &:hover {
+        .newsletter-section__info {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
@@ -721,10 +727,8 @@ body {
         }
       }
     }
-
     &__search {
     }
-
     &__button {
       font-size: toRem(18);
       font-family: "Roboto", sans-serif;
@@ -742,8 +746,10 @@ body {
     text-transform: capitalize;
     transition: color 0.4s;
     cursor: pointer;
-    &:hover {
-      color: var(--primaryColor);
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primaryColor);
+      }
     }
   }
   &__details {
@@ -937,8 +943,6 @@ body {
     }
   }
 }
-.button {
-}
 //========Sellers-section==========//
 .sellers-section {
   &__container {
@@ -969,10 +973,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: toRem(18);
-    &:hover {
-      .sellers-section__info {
-        opacity: 1;
-        visibility: visible;
+    @media (any-hover: hover) {
+      &:hover {
+        .sellers-section__info {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
@@ -1002,7 +1008,6 @@ body {
   }
   &__info {
   }
-
   .info-row {
     display: flex;
     justify-content: space-between;
@@ -1047,8 +1052,10 @@ body {
     text-transform: capitalize;
     transition: color 0.4s;
     cursor: pointer;
-    &:hover {
-      color: var(--primaryColor);
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primaryColor);
+      }
     }
   }
   &__details {
@@ -1132,10 +1139,8 @@ body {
     align-items: center;
     @include adaptiveValue("row-gap", 70, 40);
   }
-
   &__instagram {
   }
-
   &__subscribe {
     display: flex;
     flex-direction: column;
@@ -1164,7 +1169,6 @@ body {
       }
     }
   }
-
   &__submit {
     flex-basis: toRem(91);
     flex-shrink: 0;
@@ -1346,10 +1350,8 @@ body {
       }
     }
   }
-
   &__list {
   }
-
   &__item {
     &:not(:last-child) {
       margin-bottom: toRem(12);
@@ -1363,7 +1365,6 @@ body {
       }
     }
   }
-
   &__link {
     text-transform: capitalize;
     line-height: 1.714286; /* 24/14 */
@@ -1404,63 +1405,3 @@ body {
   }
 }
 //-------------------------//
-.header {
-  &__container {
-  }
-
-  &__top {
-  }
-
-  &__menu {
-  }
-}
-.top-header {
-  &__list {
-  }
-
-  &__item {
-  }
-
-  &__search {
-  }
-
-  &__icon-search {
-  }
-
-  &__entry {
-  }
-
-  &__logo {
-  }
-
-  &__accounts {
-  }
-
-  &__button-icon {
-  }
-}
-.logo {
-}
-.account-item {
-  &__account {
-  }
-
-  &__shopping {
-  }
-}
-._icon-person {
-}
-._icon-bag {
-}
-.icon-menu {
-}
-.menu {
-  &__list {
-  }
-
-  &__item {
-  }
-
-  &__link {
-  }
-}
