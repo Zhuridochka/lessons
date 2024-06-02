@@ -332,6 +332,12 @@ body {
   transition: all 0.4s;
 }
 
+._icon-person::before,
+._icon-bag::before {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
 .header {
   background-color: var(--bgColor);
 }
@@ -537,15 +543,12 @@ body {
     -ms-flex-negative: 1;
         flex-shrink: 1;
   }
-  .account-item__account p, .account-item__shopping p {
+}
+@media (max-width: 47.99875em) {
+  .account-item__account span, .account-item__shopping span {
     display: none;
   }
 }
-.account-item span::before {
-  font-size: 1.25rem;
-  font-weight: 900;
-}
-
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
