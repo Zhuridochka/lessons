@@ -276,8 +276,10 @@ body {
   transition: all 0.4s;
   text-transform: capitalize;
 }
-.button:hover {
-  background-color: var(--primaryColor);
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: var(--primaryColor);
+  }
 }
 
 .offers {
@@ -411,11 +413,13 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-.top-header__search:hover {
-  outline: 0.0625rem solid var(--primaryColor);
-  border-radius: 0.5rem;
-  -webkit-box-shadow: inset 0px 0px 4px #bab6b6;
-          box-shadow: inset 0px 0px 4px #bab6b6;
+@media (any-hover: hover) {
+  .top-header__search:hover {
+    outline: 0.0625rem solid var(--primaryColor);
+    border-radius: 0.5rem;
+    -webkit-box-shadow: inset 0px 0px 4px #bab6b6;
+            box-shadow: inset 0px 0px 4px #bab6b6;
+  }
 }
 .top-header__search:has(> .entry:focus) {
   outline: 0.0625rem solid var(--primaryColor);
@@ -1155,9 +1159,11 @@ body {
     grid-row: span 4;
   }
 }
-.catalog-brand__box:hover .catalog-brand__info {
-  opacity: 1;
-  visibility: visible;
+@media (any-hover: hover) {
+  .catalog-brand__box:hover .catalog-brand__info {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .catalog-brand__item img {
   width: 100%;
@@ -1202,9 +1208,11 @@ body {
           flex-direction: column;
   gap: 1.125rem;
 }
-.newsletter-section__inner:hover .newsletter-section__info {
-  opacity: 1;
-  visibility: visible;
+@media (any-hover: hover) {
+  .newsletter-section__inner:hover .newsletter-section__info {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .newsletter-section__body {
   position: relative;
@@ -1283,8 +1291,10 @@ body {
   transition: color 0.4s;
   cursor: pointer;
 }
-.newsletter-section__brand:hover {
-  color: var(--primaryColor);
+@media (any-hover: hover) {
+  .newsletter-section__brand:hover {
+    color: var(--primaryColor);
+  }
 }
 .navigation-newsletter {
   display: -webkit-box;
@@ -1562,9 +1572,11 @@ body {
           flex-direction: column;
   gap: 1.125rem;
 }
-.sellers-section__inner:hover .sellers-section__info {
-  opacity: 1;
-  visibility: visible;
+@media (any-hover: hover) {
+  .sellers-section__inner:hover .sellers-section__info {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .sellers-section__body {
   position: relative;
@@ -1643,8 +1655,10 @@ body {
   transition: color 0.4s;
   cursor: pointer;
 }
-.sellers-section__brand:hover {
-  color: var(--primaryColor);
+@media (any-hover: hover) {
+  .sellers-section__brand:hover {
+    color: var(--primaryColor);
+  }
 }
 .navigation-sellers {
   display: -webkit-box;
