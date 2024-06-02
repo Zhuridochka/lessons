@@ -144,6 +144,11 @@ body {
   font-weight: 600;
   transition: all 0.4s;
 }
+._icon-person::before,
+._icon-bag::before {
+  font-size: toRem(20);
+  font-weight: 900;
+}
 //========Header==========//
 .header {
   background-color: var(--bgColor);
@@ -301,17 +306,14 @@ body {
     }
     @media (max-width: toEm(767.98)) {
       flex-shrink: 1;
-
-      & p {
+    }
+    & span {
+      @media (max-width: toEm(767.98)) {
         display: none;
       }
     }
   }
   &__shopping {
-  }
-  span::before {
-    font-size: toRem(20);
-    font-weight: 900;
   }
 }
 .menu {
@@ -1402,3 +1404,63 @@ body {
   }
 }
 //-------------------------//
+.header {
+  &__container {
+  }
+
+  &__top {
+  }
+
+  &__menu {
+  }
+}
+.top-header {
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__search {
+  }
+
+  &__icon-search {
+  }
+
+  &__entry {
+  }
+
+  &__logo {
+  }
+
+  &__accounts {
+  }
+
+  &__button-icon {
+  }
+}
+.logo {
+}
+.account-item {
+  &__account {
+  }
+
+  &__shopping {
+  }
+}
+._icon-person {
+}
+._icon-bag {
+}
+.icon-menu {
+}
+.menu {
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+}
