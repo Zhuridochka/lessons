@@ -663,8 +663,6 @@ body {
 
   &__column {
     position: relative;
-  }
-  &__inner {
     display: flex;
     flex-direction: column;
     gap: toRem(18);
@@ -679,12 +677,6 @@ body {
   }
   &__body {
     position: relative;
-  }
-  &__offers {
-    position: absolute;
-    top: 7.051282%; /* 22/312 */
-    left: 0;
-    z-index: 3;
   }
   &__image {
     position: relative;
@@ -733,11 +725,17 @@ body {
       font-size: toRem(18);
       font-family: "Roboto", sans-serif;
       text-transform: capitalize;
-      padding: toRem(5) toRem(15);
+      padding: toRem(2) toRem(15);
       & span {
         margin-right: toRem(8);
       }
     }
+  }
+  &__offers {
+    position: absolute;
+    top: 7.051282%; /* 22/312 */
+    left: 0;
+    z-index: 3;
   }
   .button {
   }
@@ -745,6 +743,7 @@ body {
     font-weight: 600;
     text-transform: capitalize;
     transition: color 0.4s;
+    flex-grow: 1;
     cursor: pointer;
     @media (any-hover: hover) {
       &:hover {
@@ -968,8 +967,6 @@ body {
     flex-basis: toRem(312);
     flex-shrink: 0;
     position: relative;
-  }
-  &__inner {
     display: flex;
     flex-direction: column;
     gap: toRem(18);
@@ -982,14 +979,22 @@ body {
       }
     }
   }
+  // &__inner {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: toRem(18);
+  //   overflow: hidden;
+  //   @media (any-hover: hover) {
+  //     &:hover {
+  //       .sellers-section__info {
+  //         opacity: 1;
+  //         visibility: visible;
+  //       }
+  //     }
+  //   }
+  // }
   &__body {
     position: relative;
-  }
-  &__offers {
-    position: absolute;
-    top: 7.051282%; /* 22/312 */
-    left: 0;
-    z-index: 3;
   }
   &__image {
     position: relative;
@@ -1045,9 +1050,16 @@ body {
       }
     }
   }
+  &__offers {
+    position: absolute;
+    top: 7.051282%; /* 22/312 */
+    left: 0;
+    z-index: 3;
+  }
   .button {
   }
   &__brand {
+    flex-grow: 1;
     font-weight: 600;
     text-transform: capitalize;
     transition: color 0.4s;
