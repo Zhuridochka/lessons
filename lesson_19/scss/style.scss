@@ -127,13 +127,11 @@ body {
   }
 }
 .info-row {
-  position: absolute;
   width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s;
-  bottom: 0;
-  left: 0;
+
   display: flex;
   justify-content: space-between;
   gap: toRem(50);
@@ -637,8 +635,9 @@ body {
     left: 0;
   }
   &__info {
-  }
-  .info-row {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 //========Newsletter-section==========//
@@ -674,6 +673,14 @@ body {
         }
       }
     }
+    @media (any-hover: none) {
+      &:hover {
+        .newsletter-section__info {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
   &__body {
     position: relative;
@@ -694,43 +701,11 @@ body {
     }
   }
   &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 
-  .info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: toRem(20);
-    font-size: toRem(20);
-
-    &__likes {
-      display: flex;
-      align-items: center;
-      gap: toRem(21);
-      font-weight: 400;
-      cursor: pointer;
-    }
-    &__heart,
-    &__search {
-      transition: color 0.4s;
-      @media (any-hover: hover) {
-        &:hover {
-          color: var(--primaryColor);
-        }
-      }
-    }
-    &__search {
-    }
-    &__button {
-      font-size: toRem(18);
-      font-family: "Roboto", sans-serif;
-      text-transform: capitalize;
-      padding: toRem(2) toRem(15);
-      & span {
-        margin-right: toRem(8);
-      }
-    }
-  }
   &__offers {
     position: absolute;
     top: 7.051282%; /* 22/312 */
@@ -752,8 +727,6 @@ body {
     }
   }
   &__details {
-  }
-  &__info {
   }
 }
 .navigation-newsletter {
@@ -978,21 +951,16 @@ body {
         }
       }
     }
+    @media (any-hover: none) {
+      &:hover {
+        .sellers-section__info {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
-  // &__inner {
-  //   display: flex;
-  //   flex-direction: column;
-  //   gap: toRem(18);
-  //   overflow: hidden;
-  //   @media (any-hover: hover) {
-  //     &:hover {
-  //       .sellers-section__info {
-  //         opacity: 1;
-  //         visibility: visible;
-  //       }
-  //     }
-  //   }
-  // }
+
   &__body {
     position: relative;
   }
@@ -1012,6 +980,9 @@ body {
     }
   }
   &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   .info-row {
     display: flex;
@@ -1071,8 +1042,6 @@ body {
     }
   }
   &__details {
-  }
-  &__info {
   }
 }
 .navigation-sellers {
