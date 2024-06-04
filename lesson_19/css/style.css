@@ -963,6 +963,9 @@ body {
     padding: 0.875rem 1.625rem;
   }
 }
+.collections-section ._icon-bag {
+  font-size: 1.5rem;
+}
 .collections-section__column-image {
   -ms-flex-item-align: center;
       align-self: center;
@@ -1313,11 +1316,15 @@ body {
   text-transform: capitalize;
 }
 .navigation-newsletter__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  gap: 0.25rem;
   padding: 0.3125rem 0.9375rem;
-  font-size: 1rem;
 }
-.navigation-newsletter__button span {
-  margin-right: 0.25rem;
+.navigation-newsletter ._icon-filter {
+  font-size: 0.875rem;
 }
 
 .details-box {
@@ -1689,11 +1696,15 @@ body {
   text-transform: capitalize;
 }
 .navigation-sellers__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  gap: 0.25rem;
   padding: 0.3125rem 0.9375rem;
-  font-size: 1rem;
 }
-.navigation-sellers__button span {
-  margin-right: 0.25rem;
+.navigation-sellers ._icon-filter {
+  font-size: 0.875rem;
 }
 
 .details-box {
@@ -1918,13 +1929,18 @@ body {
     border-bottom: 0.125rem solid var(--primaryColor);
   }
 }
+@media (any-hover: none) {
+  .tracking-section__submit:hover {
+    color: var(--primaryColor);
+    border-bottom: 0.125rem solid var(--primaryColor);
+  }
+}
 @media (max-width: 29.99875em) {
   .tracking-section__submit {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 }
-
 .instagram-pages {
   display: -webkit-box;
   display: -ms-flexbox;
