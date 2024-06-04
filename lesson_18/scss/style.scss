@@ -32,6 +32,10 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // ==========================================================
+:root {
+  --header-hight: clamp(4.938rem, 4.175rem + 3.81vw, 8.75rem);
+}
+// ==========================================================
 html {
   scroll-behavior: smooth; //Плавна прокрутка по target до потрібної секції
 }
@@ -67,7 +71,7 @@ body {
 //----Загальні стилі------//
 .page {
   &__home {
-    padding-top: 150px;
+    padding-top: var(--header-hight);
     @include adaptiveValue("margin-bottom", 80, 20, 0, 1512, 393);
     @media (max-width: toEm(767.98)) {
       padding-top: toRem(80);
@@ -106,6 +110,11 @@ body {
     }
   }
 }
+@media (any-hover: none) {
+  &:hover .button {
+    background-color: #0b0045;
+  }
+}
 //========Шаблони==========//
 
 %title-theme {
@@ -123,7 +132,8 @@ body {
 }
 //========Header==========//
 .header {
-  // position: fixed;
+  position: fixed;
+  min-height: var(--header-hight);
   top: 0;
   left: 0;
   width: 100%;
@@ -339,8 +349,11 @@ body {
     }
   }
   &__container {
+    // padding-top: toRem(88);
+    @include adaptiveValue("padding-top", 88, 10);
   }
   &__body {
+    padding-top: toRem(30);
     display: flex;
     @include adaptiveValue("column-gap", 58, 30, 0, 1512, 393);
   }
@@ -364,12 +377,25 @@ body {
     z-index: 2;
     width: 45.784884%; /* 315/688 */
     aspect-ratio: 315 / 377;
+    object-fit: contain;
     @media (max-width: toEm(767.98)) {
+      height: 80%;
+      bottom: 10px;
+      right: toRem(-10%);
+      align-self: flex-end;
       justify-self: flex-end;
-      width: 100%;
+      width: 90%;
     }
     @media (max-width: toEm(500)) {
       transform: translateX(0%);
+      width: 100%;
+      flex-shrink: 0;
+    }
+    @media (max-width: toEm(393)) {
+      width: 100%;
+      aspect-ratio: 97 / 108;
+      object-fit: contain;
+      bottom: 0;
     }
   }
   &__current-right {
@@ -395,6 +421,13 @@ body {
       top: 21.022727%; /* 37/176 */
       transform: rotate(18deg);
     }
+    @media (max-width: toEm(500)) {
+      width: 30%;
+      flex-shrink: 0;
+    }
+    @media (max-width: toEm(320)) {
+      width: 50%;
+    }
   }
   &__latter-pr {
     position: absolute;
@@ -409,6 +442,13 @@ body {
       top: 11.3%;
       transform: rotate(-15deg);
     }
+    @media (max-width: toEm(500)) {
+      width: 30%;
+      flex-shrink: 0;
+    }
+    @media (max-width: toEm(320)) {
+      width: 50%;
+    }
   }
   &__content {
     display: flex;
@@ -418,7 +458,7 @@ body {
     gap: 20px;
     position: relative;
     z-index: 3;
-    @include adaptiveValue("margin-top", 112, 23, 0, 1512, 393);
+    // @include adaptiveValue("margin-top", 112, 23, 0, 1512, 393);
     @media (max-width: toEm(393)) {
       gap: 12px;
       max-width: 233px;
