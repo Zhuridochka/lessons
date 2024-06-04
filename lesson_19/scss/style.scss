@@ -477,6 +477,10 @@ body {
       padding: toRem(14) toRem(26);
     }
   }
+  ._icon-bag {
+    font-size: toRem(24);
+  }
+
   &__column-image {
     align-self: center;
     flex: 0 1 toRem(424);
@@ -761,11 +765,13 @@ body {
     text-transform: capitalize;
   }
   &__button {
+    display: inline-flex;
+    text-align: center;
+    gap: toRem(4);
     padding: toRem(5) toRem(15);
-    font-size: toRem(16);
-    & span {
-      margin-right: toRem(4);
-    }
+  }
+  ._icon-filter {
+    font-size: toRem(14);
   }
 }
 .details-box {
@@ -1076,11 +1082,13 @@ body {
     text-transform: capitalize;
   }
   &__button {
+    display: inline-flex;
+    text-align: center;
+    gap: toRem(4);
     padding: toRem(5) toRem(15);
-    font-size: toRem(16);
-    & span {
-      margin-right: toRem(4);
-    }
+  }
+  ._icon-filter {
+    font-size: toRem(14);
   }
 }
 .details-box {
@@ -1169,10 +1177,18 @@ body {
         border-bottom: toRem(2) solid var(--primaryColor);
       }
     }
+    @media (any-hover: none) {
+      &:hover {
+        color: var(--primaryColor);
+        border-bottom: toRem(2) solid var(--primaryColor);
+      }
+    }
     @media (max-width: toEm(479.98)) {
       padding-left: toRem(8);
       padding-right: toRem(8);
     }
+  }
+  ._icon-submit {
   }
 }
 .instagram-pages {
