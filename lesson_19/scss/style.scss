@@ -709,6 +709,40 @@ body {
     bottom: 0;
     left: 0;
   }
+  .info-row {
+    gap: toRem(20);
+    font-size: toRem(20);
+
+    &__likes {
+      display: flex;
+      align-items: center;
+      gap: toRem(21);
+      font-weight: 400;
+      cursor: pointer;
+    }
+    &__heart,
+    &__search {
+      transition: color 0.4s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+    }
+
+    &__search {
+    }
+
+    &__button {
+      font-size: toRem(18);
+      font-family: "Roboto", sans-serif;
+      text-transform: capitalize;
+      padding: toRem(5) toRem(15);
+      & span {
+        margin-right: toRem(8);
+      }
+    }
+  }
 
   &__offers {
     position: absolute;
@@ -991,9 +1025,6 @@ body {
     left: 0;
   }
   .info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: toRem(20);
     font-size: toRem(20);
 
@@ -1089,6 +1120,7 @@ body {
   }
   ._icon-filter {
     font-size: toRem(14);
+    justify-self: flex-end;
   }
 }
 .details-box {
