@@ -665,8 +665,9 @@ body {
   }
 
   &__column {
+    display: none;
     position: relative;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     gap: toRem(18);
     @media (any-hover: hover) {
@@ -684,6 +685,9 @@ body {
           visibility: visible;
         }
       }
+    }
+    &.show {
+      display: flex;
     }
   }
   &__body {
@@ -781,16 +785,12 @@ body {
     }
   }
   &__item {
-    &:not(:first-child) {
-      color: rgba(0, 0, 0, 0.5);
-    }
-    &:first-child {
-      color: var(--mainColor);
-    }
+    color: rgba(0, 0, 0, 0.5);
+
     &:hover {
       color: var(--primaryColor);
     }
-    &:active {
+    &.active {
       color: var(--mainColor);
     }
   }
@@ -975,6 +975,9 @@ body {
     gap: toRem(24);
     overflow-x: auto;
     overflow-y: clip;
+    &.column {
+      display: none;
+    }
   }
   &__column {
     flex-basis: toRem(312);
