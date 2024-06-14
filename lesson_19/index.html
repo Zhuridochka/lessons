@@ -17,7 +17,7 @@
           <ul class="top-header__list">
             <li class="top-header__item">
               <form action="#" class="top-header__search">
-                <button type="submit" class="top-header__icon-search">
+                <button type="submit" class="top-header__search">
                   <img src="img/header/icons/search_icon.svg" alt="Іконка пошуку">
                 </button>
                 <input class="top-header__entry" type="search">
@@ -104,7 +104,9 @@
                 <a href="#" class="brand-section__link"> <img src="img/main/brands/brand_02.webp" alt="Бренд Salva"></a>
               </li>
               <li class="brand-section__item">
-                <a href="#" class="brand-section__link"><img src="img/main/brands/brand_03.webp" alt="Бренд Golden Studio"></a>
+                <a href="#" class="brand-section__link">
+                  <img src="img/main/brands/brand_03.webp" alt="Бренд Golden Studio">
+                </a>
               </li>
               <li class="brand-section__item">
                 <a href="#" class="brand-section__link"><img src="img/main/brands/brand_04.webp" alt="Бренд Furniture"></a>
@@ -188,42 +190,42 @@
           </div>
         </article>
       </div>
-      <section class="page__newsletter newsletter-section">
+      <section data-filter-group="group1" class="page__newsletter newsletter-section">
         <div class="newsletter-section__container">
           <h2 class="newsletter-section__title title">Or subscribe to the newsletter</h2>
-          <div class="newsletter-section__navigation navigation-newsletter">
-            <ul class="navigation-newsletter__tabs">
-              <li class="navigation-newsletter__item active" data-filter="all">
-                <button class="navigation-newsletter__link">
+          <div class="newsletter-section__navigation navigation-box">
+            <ul class="navigation-box__tabs">
+              <li class="navigation-box__item active" data-filter="all">
+                <button class="navigation-box__link">
                   all products
                 </button>
               </li>
-              <li class="navigation-newsletter__item" data-filter="category1">
-                <button class="navigation-newsletter__link">
+              <li class="navigation-box__item" data-filter="category1">
+                <button class="navigation-box__link">
                   t-shirt
                 </button>
               </li>
-              <li class="navigation-newsletter__item" data-filter="category2">
-                <button class="navigation-newsletter__link">
+              <li class="navigation-box__item" data-filter="category2">
+                <button class="navigation-box__link">
                   hoodies
                 </button>
               </li>
-              <li class="navigation-newsletter__item" data-filter="category3">
-                <button class="navigation-newsletter__link" data-filter="category3">
+              <li class="navigation-box__item" data-filter="category3">
+                <button class="navigation-box__link">
                   jacket
                 </button>
               </li>
             </ul>
-            <button class="navigation-newsletter__button button _icon-filter" type="button">filter</button>
+            <button class="navigation-box__button button _icon-filter" type="button">filter</button>
           </div>
           <div class="newsletter-section__products">
             <ul class="newsletter-section__items">
-              <li class="newsletter-section__column show" data-category="category1">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
+              <li class="newsletter-section__column item-column show" data-category="category1">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
                     <img src="img/main/newsletter/img_01_1.5x.webp" alt="Image 01">
                   </a>
-                  <div class="newsletter-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -232,13 +234,13 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="newsletter-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="newsletter-section__brand">Adicolor Classics Joggers</h3>
-                <div class="newsletter-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
@@ -247,12 +249,12 @@
                   </div>
                 </div>
               </li>
-              <li class="newsletter-section__column show" data-category="category2">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
+              <li class="newsletter-section__column item-column show" data-category="category2">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
                     <img src="img/main/newsletter/img_02_1.5x.webp" alt="Image 02">
                   </a>
-                  <div class="newsletter-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -261,27 +263,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="newsletter-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="newsletter-section__brand">Nike Sportswear Futura Luxe</h3>
-                <div class="newsletter-section__details details-box">
-                  <div class="details-box__type">Bag</div>
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
+                  <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$130.00</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="newsletter-section__column show" data-category="category3">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
+              <li class="newsletter-section__column item-column show" data-category="category3">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
                     <img src="img/main/newsletter/img_03_1.5x.webp" alt="Image 03">
                   </a>
-                  <div class="newsletter-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -290,27 +292,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="newsletter-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="newsletter-section__brand">Geometric print Scarf</h3>
-                <div class="newsletter-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$53.00</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="newsletter-section__column show" data-category="category1">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
+              <li class="newsletter-section__column item-column show" data-category="category1">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
                     <img src="img/main/newsletter/img_04_1.5x.webp" alt="Image 04">
                   </a>
-                  <div class="newsletter-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -319,27 +321,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="newsletter-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="newsletter-section__brand">Yellow Reserved Hoodie</h3>
-                <div class="newsletter-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
-                    <s class="details-box__old-price">$364.00</s>
-                    <!-- <div class="details-box__price">$63.85</div> -->
-                    <div class="details-box__new-price">$155.00</div>
+                    <!-- <s class="details-box__old-price">$220.00</s> -->
+                    <div class="details-box__price">$63.85</div>
+                    <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="newsletter-section__column show" data-category="category2">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
+              <li class="newsletter-section__column item-column show" data-category="category2">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
                     <img src="img/main/newsletter/img_05_1.5x.webp" alt="Image 05">
                   </a>
-                  <div class="newsletter-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -348,27 +350,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="newsletter-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="newsletter-section__brand">Basic Dress Green</h3>
-                <div class="newsletter-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$236.00</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="newsletter-section__column show" data-category="category3">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
+              <li class="newsletter-section__column item-column show" data-category="category3">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
                     <img src="img/main/newsletter/img_06_1.5x.webp" alt="Image 06">
                   </a>
-                  <div class="newsletter-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -377,56 +379,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="newsletter-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="newsletter-section__brand">Nike Air Zoom Pegasus</h3>
-                <div class="newsletter-section__details details-box">
-                  <div class="details-box__type">shoe</div>
-                  <div class="details-box__costs">
-                    <s class="details-box__old-price">$220.00</s>
-                    <!-- <div class="details-box__price">$63.85</div> -->
-                    <div class="details-box__new-price">$198.00</div>
-                  </div>
-                </div>
-              </li>
-              <li class="newsletter-section__column show" data-category="category1">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
-                    <img src="img/main/newsletter/img_07_1.5x.webp" alt="Image 07">
-                  </a>
-                  <div class="newsletter-section__info info-row">
-                    <div class="info-row__likes">
-                      <a class="info-row__heart _icon-heart"></a>
-                      <a class="info-row__search _icon-search"></a>
-                    </div>
-                    <button class="info-row__button button" type="button">
-                      <span class="_icon-bag"></span>shop now
-                    </button>
-                  </div>
-                  <div class="newsletter-section__offers offers">
-                    <div class="offers__label offers__label--sale">sale</div>
-                    <div class="offers__label offers__label--hot">hot</div>
-                  </div>
-                </div>
-                <h3 class="newsletter-section__brand">Nike Repel Miler</h3>
-                <div class="newsletter-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$120.50</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="newsletter-section__column show" data-category="category2">
-                <div class="newsletter-section__body">
-                  <a href="#" class="newsletter-section__image">
-                    <img src="img/main/newsletter/img_08_1.5x.webp" alt="Image 08">
+              <li class="newsletter-section__column item-column show" data-category="category1">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_07_1.5x.webp" alt="Image 07">
                   </a>
-                  <div class="newsletter-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -435,17 +408,46 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="newsletter-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="newsletter-section__brand">Nike Sportswear Futura Luxe</h3>
-                <div class="newsletter-section__details details-box">
-                  <div class="details-box__type">Glasses</div>
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
+                  <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$160.00</div>
+                    <div class="details-box__price">$63.85</div>
+                    <!-- <div class="details-box__new-price">$63.85</div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="newsletter-section__column item-column show" data-category="category2">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_08_1.5x.webp" alt="Image 08">
+                  </a>
+                  <div class="item-column__info info-row">
+                    <div class="info-row__likes">
+                      <a class="info-row__heart _icon-heart"></a>
+                      <a class="info-row__search _icon-search"></a>
+                    </div>
+                    <button class="info-row__button button" type="button">
+                      <span class="_icon-bag"></span>shop now
+                    </button>
+                  </div>
+                  <div class="item-column__offers offers">
+                    <div class="offers__label offers__label--sale">sale</div>
+                    <div class="offers__label offers__label--hot">hot</div>
+                  </div>
+                </div>
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
+                  <div class="details-box__type">Dress</div>
+                  <div class="details-box__costs">
+                    <!-- <s class="details-box__old-price">$220.00</s> -->
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
@@ -476,42 +478,42 @@
           <img src="img/main/zara/zara_logo.webp" alt="Фонове прозоре зображення логотипу ZARA">
         </div>
       </section>
-      <section class="page__sellers sellers-section">
+      <section data-filter-group="group2" class="page__sellers sellers-section">
         <div class="sellers-section__container">
           <h2 class="sellers-section__title title">Best sellers</h2>
-          <div class="sellers-section__navigation navigation-sellers">
-            <ul class="navigation-sellers__tabs">
-              <li class="navigation-sellers__item">
-                <button class="navigation-sellers__link">
+          <div class="sellers-section__navigation navigation-box">
+            <ul class="navigation-box__tabs">
+              <li data-filter="all" class="navigation-box__item">
+                <button class="navigation-box__link">
                   all products
                 </button>
               </li>
-              <li class="navigation-sellers__item">
-                <button class="navigation-sellers__link">
+              <li data-filter="category1" class="navigation-box__item">
+                <button class="navigation-box__link">
                   t-shirt
                 </button>
               </li>
-              <li class="navigation-sellers__item">
-                <button class="navigation-sellers__link">
+              <li data-filter="category2" class="navigation-box__item">
+                <button class="navigation-box__link">
                   hoodies
                 </button>
               </li>
-              <li class="navigation-sellers__item">
-                <button class="navigation-sellers__link">
+              <li data-filter="category3" class="navigation-box__item">
+                <button class="navigation-box__link">
                   jacket
                 </button>
               </li>
             </ul>
-            <button class="navigation-sellers__button button _icon-filter" type="button">filter</button>
+            <button class="navigation-box__button button _icon-filter" type="button">filter</button>
           </div>
           <div class="sellers-section__products">
             <ul class="sellers-section__items">
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_01_1.5x.webp" alt="Image 01">
+              <li class="sellers-section__column item-column show" data-category="category1">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_01_1.5x.webp" alt="Image 01">
                   </a>
-                  <div class="sellers-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -520,13 +522,13 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="sellers-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="sellers-section__brand">Adicolor Classics Joggers</h3>
-                <div class="sellers-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
@@ -535,12 +537,12 @@
                   </div>
                 </div>
               </li>
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_02_1.5x.webp" alt="Image 02">
+              <li class="sellers-section__column item-column show" data-category="category2">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_02_1.5x.webp" alt="Image 02">
                   </a>
-                  <div class="sellers-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -549,27 +551,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="sellers-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="sellers-section__brand">Nike Sportswear Futura Luxe</h3>
-                <div class="sellers-section__details details-box">
-                  <div class="details-box__type">Bag</div>
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
+                  <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$130.00</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_03_1.5x.webp" alt="Image 03">
+              <li class="sellers-section__column item-column show" data-category="category3">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_03_1.5x.webp" alt="Image 03">
                   </a>
-                  <div class="sellers-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -578,27 +580,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="sellers-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="sellers-section__brand">Geometric print Scarf</h3>
-                <div class="sellers-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$53.00</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_04_1.5x.webp" alt="Image 04">
+              <li class="sellers-section__column item-column show" data-category="category1">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_04_1.5x.webp" alt="Image 04">
                   </a>
-                  <div class="sellers-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -607,56 +609,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="sellers-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="sellers-section__brand">Yellow Reserved Hoodie</h3>
-                <div class="sellers-section__details details-box">
-                  <div class="details-box__type">Dress</div>
-                  <div class="details-box__costs">
-                    <s class="details-box__old-price">$364.00</s>
-                    <!-- <div class="details-box__price">$63.85</div> -->
-                    <div class="details-box__new-price">$155.00</div>
-                  </div>
-                </div>
-              </li>
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_05_1.5x.webp" alt="Image 05">
-                  </a>
-                  <div class="sellers-section__info info-row">
-                    <div class="info-row__likes">
-                      <a class="info-row__heart _icon-heart"></a>
-                      <a class="info-row__search _icon-search"></a>
-                    </div>
-                    <button class="info-row__button button" type="button">
-                      <span class="_icon-bag"></span>shop now
-                    </button>
-                  </div>
-                  <div class="sellers-section__offers offers">
-                    <div class="offers__label offers__label--sale">sale</div>
-                    <div class="offers__label offers__label--hot">hot</div>
-                  </div>
-                </div>
-                <h3 class="sellers-section__brand">Basic Dress Green</h3>
-                <div class="sellers-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$236.00</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_06_1.5x.webp" alt="Image 06">
+              <li class="sellers-section__column item-column show" data-category="category2">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_05_1.5x.webp" alt="Image 05">
                   </a>
-                  <div class="sellers-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -665,56 +638,27 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="sellers-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="sellers-section__brand">Nike Air Zoom Pegasus</h3>
-                <div class="sellers-section__details details-box">
-                  <div class="details-box__type">shoe</div>
-                  <div class="details-box__costs">
-                    <s class="details-box__old-price">$220.00</s>
-                    <!-- <div class="details-box__price">$63.85</div> -->
-                    <div class="details-box__new-price">$198.00</div>
-                  </div>
-                </div>
-              </li>
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_07_1.5x.webp" alt="Image 07">
-                  </a>
-                  <div class="sellers-section__info info-row">
-                    <div class="info-row__likes">
-                      <a class="info-row__heart _icon-heart"></a>
-                      <a class="info-row__search _icon-search"></a>
-                    </div>
-                    <button class="info-row__button button" type="button">
-                      <span class="_icon-bag"></span>shop now
-                    </button>
-                  </div>
-                  <div class="sellers-section__offers offers">
-                    <div class="offers__label offers__label--sale">sale</div>
-                    <div class="offers__label offers__label--hot">hot</div>
-                  </div>
-                </div>
-                <h3 class="sellers-section__brand">Nike Repel Miler</h3>
-                <div class="sellers-section__details details-box">
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
                   <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$120.50</div>
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
               </li>
-              <li class="sellers-section__column">
-                <div class="sellers-section__body">
-                  <a href="#" class="sellers-section__image">
-                    <img src="img/main/sellers/img_08_1.5x.webp" alt="Image 08">
+              <li class="sellers-section__column item-column show" data-category="category3">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_06_1.5x.webp" alt="Image 06">
                   </a>
-                  <div class="sellers-section__info info-row">
+                  <div class="item-column__info info-row">
                     <div class="info-row__likes">
                       <a class="info-row__heart _icon-heart"></a>
                       <a class="info-row__search _icon-search"></a>
@@ -723,17 +667,75 @@
                       <span class="_icon-bag"></span>shop now
                     </button>
                   </div>
-                  <div class="sellers-section__offers offers">
+                  <div class="item-column__offers offers">
                     <div class="offers__label offers__label--sale">sale</div>
                     <div class="offers__label offers__label--hot">hot</div>
                   </div>
                 </div>
-                <h3 class="sellers-section__brand">Nike Sportswear Futura Luxe</h3>
-                <div class="sellers-section__details details-box">
-                  <div class="details-box__type">Glasses</div>
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
+                  <div class="details-box__type">Dress</div>
                   <div class="details-box__costs">
                     <!-- <s class="details-box__old-price">$220.00</s> -->
-                    <div class="details-box__price">$160.00</div>
+                    <div class="details-box__price">$63.85</div>
+                    <!-- <div class="details-box__new-price">$63.85</div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="sellers-section__column item-column show" data-category="category1">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_07_1.5x.webp" alt="Image 07">
+                  </a>
+                  <div class="item-column__info info-row">
+                    <div class="info-row__likes">
+                      <a class="info-row__heart _icon-heart"></a>
+                      <a class="info-row__search _icon-search"></a>
+                    </div>
+                    <button class="info-row__button button" type="button">
+                      <span class="_icon-bag"></span>shop now
+                    </button>
+                  </div>
+                  <div class="item-column__offers offers">
+                    <div class="offers__label offers__label--sale">sale</div>
+                    <div class="offers__label offers__label--hot">hot</div>
+                  </div>
+                </div>
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
+                  <div class="details-box__type">Dress</div>
+                  <div class="details-box__costs">
+                    <!-- <s class="details-box__old-price">$220.00</s> -->
+                    <div class="details-box__price">$63.85</div>
+                    <!-- <div class="details-box__new-price">$63.85</div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="sellers-section__column item-column show" data-category="category2">
+                <div class="item-column__body">
+                  <a href="#" class="item-column__image">
+                    <img src="img/main/newsletter/img_08_1.5x.webp" alt="Image 08">
+                  </a>
+                  <div class="item-column__info info-row">
+                    <div class="info-row__likes">
+                      <a class="info-row__heart _icon-heart"></a>
+                      <a class="info-row__search _icon-search"></a>
+                    </div>
+                    <button class="info-row__button button" type="button">
+                      <span class="_icon-bag"></span>shop now
+                    </button>
+                  </div>
+                  <div class="item-column__offers offers">
+                    <div class="offers__label offers__label--sale">sale</div>
+                    <div class="offers__label offers__label--hot">hot</div>
+                  </div>
+                </div>
+                <h3 class="item-column__brand">Adicolor Classics Joggers</h3>
+                <div class="item-column__details details-box">
+                  <div class="details-box__type">Dress</div>
+                  <div class="details-box__costs">
+                    <!-- <s class="details-box__old-price">$220.00</s> -->
+                    <div class="details-box__price">$63.85</div>
                     <!-- <div class="details-box__new-price">$63.85</div> -->
                   </div>
                 </div>
