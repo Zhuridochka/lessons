@@ -1,0 +1,176 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+
+// Локальне підключення шрифтів
+@import "_fonts.scss";
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+// Окремі сторінки
+// @import "_home.scss";
+// Окремі компоненти
+// @import "_header.scss";
+// @import "_footer.scss";
+// ...@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+// Іконочний шрифт
+@import "_iconts_font.scss";
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+:root {
+  --mainColor: #000000;
+  --blackColor: #1e2832;
+  --whiteColor: #ffffff;
+  --primaryColor: #ff6f61;
+  --bgColor: rgba(30, 40, 50, 0.05);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--whiteColor);
+  .menu-open & {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  padding-left: toRem(20);
+  padding-right: toRem(20);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--blackColor);
+
+  & > main {
+    flex-grow: 1;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1350px; //! Oбмежуючий контейнер+відступи
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+//========Загальні стилі==========//
+
+//========Main-page==========//
+.page {
+  display: inline-block;
+  &--margin {
+    margin-top: toRem(30);
+    margin-left: toRem(50);
+  }
+  span {
+    opacity: 0;
+    font-size: toRem(30);
+    letter-spacing: toEm(5, 30);
+    display: inline-block;
+    animation: animate 1s forwards;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(30deg) translate(0, 30%);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translate(0, 0%);
+  }
+}
+
+.menu {
+  // .menu__body
+  &__body {
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    padding-bottom: toRem(20);
+  }
+
+  // .menu__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(20);
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  // .menu__item
+  &__item {
+    transition: all 0.4s;
+    color: #ff6f61;
+    font-size: toRem(20);
+  }
+
+  // .menu__link
+  &__link {
+    @media (any-hover: hover) {
+      &:hover {
+        color: rgb(225, 29, 29);
+        text-decoration: underline;
+      }
+    }
+    @media (any-hover: none) {
+      &:hover {
+        color: rgb(29, 241, 29);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.button-new {
+  font-size: toRem(20);
+  padding: toRem(15) toRem(20);
+  line-height: 1.2;
+  background-color: #ff6f61;
+  border: 1px solid yellowgreen;
+  border-radius: toRem(4);
+}
+
+.button {
+  background-color: #ffffff;
+  padding: toRem(10) toRem(20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e2832;
+  font-size: toRem(22);
+  font-weight: 600;
+  max-width: toRem(150);
+  border-radius: toRem(5);
+  border: 1px solid #000000;
+  &--margin {
+    margin-top: toRem(20);
+    margin-bottom: toRem(20);
+  }
+}
+
+.some-image {
+  max-width: 50%;
+  // height: 100%;
+  aspect-ratio: 500 / 350;
+  object-fit: cover;
+}
