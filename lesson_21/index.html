@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <base target="_blank" href="https://google.com"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Lesson 21</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" id="header">
+      <div class="header__container">
+        <div class="header__text">я шапка</div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__container">
+        <h1 class="page__title">Урок 21 JavaScript (частина 1)</h1>
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №1</h2>
+          <div class="task__content">
+            <h3 class="task__question">Яка назва змінної вірна:</h3>
+            <ol class="task__list">
+              <li class="text">let user-name</li>
+              <li class="text">let UserName</li>
+              <li class="text">let userName</li>
+            </ol>
+            <div class="task__ansver">Відповідь: № 3</div>
+          </div>
+        </article>
+
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №2</h2>
+          <div class="task__content">
+            <h3 class="task__question">Чи буде помилка при виконанні наступної програми:</h3>
+            <pre>
+      const userName = 20
+      userName = "Іштван"
+        </pre>
+            <div class="task__ansver">Відповідь: так, буде помилкою. Адже змінна оголошена за допомогою const і значення константи не можна змінити</div>
+          </div>
+        </article>
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №3</h2>
+          <div class="task__content">
+            <h3 class="task__question">Що потрапить в консоль?</h3>
+            <pre>
+      let numOne = 20
+      let numTwo = "20"
+            
+      let numSumm = numOne + numTwo
+      console.log(numSumm)
+                </pre>
+            <div class="task__ansver">Відповідь: в консоль потрапить String 2020, тому що ми намагаємося порахувати суму різних типів даних. В першому випадку - це number, в другому випадку - це String</div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__text">я підвал</div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
