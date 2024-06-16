@@ -181,18 +181,24 @@ body {
   font-weight: 600;
   max-width: toRem(150);
   border-radius: toRem(5);
-  border: 1px solid #000000;
+  border: 1px solid var(--primaryColor);
+  background-color: #0c6876;
+  color: var(--primaryColor);
   // .button--margin
 
   &--margin {
     margin-top: toRem(20);
     margin-bottom: toRem(20);
   }
+  &__block {
+  }
 }
 .some-image {
   max-width: 50%;
   aspect-ratio: 500 / 350;
   object-fit: cover;
+  float: left;
+  padding-right: toRem(10);
 }
 .link {
   text-decoration: underline;
