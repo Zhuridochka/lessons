@@ -1,0 +1,199 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,500,600&display=swap");
+
+// Локальне підключення шрифтів
+// @import "_fonts.scss";
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+// Окремі сторінки
+// @import "_home.scss";
+// Окремі компоненти
+// @import "_header.scss";
+// @import "_footer.scss";
+// ...@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+// Іконочний шрифт
+@import "_iconts_font.scss";
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+:root {
+  --mainColor: #000000;
+  --blackColor: #1e2832;
+  --whiteColor: #ffffff;
+  --primaryColor: #ff6f61;
+  --bgColor: rgba(30, 40, 50, 0.05);
+  --bgColorLightGreen: #4b8e32;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--whiteColor);
+
+  .menu-open & {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--mainColor);
+
+  & > main {
+    flex-grow: 1;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1350px; //! Oбмежуючий контейнер+відступи
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+//========Загальні стилі==========//
+
+//========Header==========//
+.header {
+  background-color: var(--blackColor);
+
+  // .header__container
+
+  &__container {
+    padding-top: toRem(5);
+    padding-bottom: toRem(5);
+  }
+
+  // .header__text
+
+  &__text {
+    font-size: toRem(30);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
+  }
+}
+
+//========Main-page==========//
+.page {
+  // .page__container
+
+  &__container {
+    padding-top: toRem(30);
+    padding-bottom: toRem(50);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: toRem(40);
+  }
+
+  // .page__title
+
+  &__title {
+    font-size: toRem(28);
+
+    font-weight: 500;
+    text-decoration: underline;
+    align-self: center;
+  }
+
+  // .page__task
+
+  &__task {
+  }
+}
+.task {
+  border: 3px solid var(--whiteColor);
+  border-radius: toRem(10);
+  padding: toRem(20);
+  background-color: var(--bgColorLightGreen);
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(15);
+
+  // .task__subtitle
+
+  &__subtitle {
+    text-align: center;
+    vertical-align: middle;
+    font-size: toRem(24);
+    text-decoration: underline;
+    font-weight: 500;
+    color: yellow;
+  }
+
+  // .task__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+    font-size: toRem(22);
+  }
+
+  // .task__question
+
+  &__question {
+  }
+
+  // .task__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    padding-left: toRem(50);
+  }
+
+  &__text {
+  }
+
+  // .task__ansver
+
+  &__ansver {
+    color: yellow;
+  }
+}
+
+//----Footer------//
+.footer {
+  background-color: var(--blackColor);
+
+  // .footer__container
+
+  &__container {
+    padding-top: toRem(5);
+    padding-bottom: toRem(5);
+  }
+
+  // .footer__text
+
+  &__text {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
+  }
+}

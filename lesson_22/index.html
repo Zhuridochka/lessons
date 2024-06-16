@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <base target="_blank" href="https://google.com"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Lesson 22</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" id="header">
+      <div class="header__container">
+        <div class="header__text">я шапка</div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__container">
+        <h1 class="page__title">Урок 22 JavaScript (частина 2)</h1>
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №1</h2>
+          <div class="task__content">
+            <h3 class="task__question">Що потрапить в консоль?</h3>
+            <pre>
+    let someVar = 0;
+    ++someVar;
+
+    if (someVar) {
+      console.log(someVar);    }
+          </pre>
+            <div class="task__ansver">Відповідь: в консоль потрапить 1</div>
+          </div>
+        </article>
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №2</h2>
+          <div class="task__content">
+            <h3 class="task__question">За допомогою циклу FOR виведіть в консоль 10 рядків:</h3>
+            <pre>
+        Пункт №1
+        Пункт №2
+        і т.д.
+          </pre>
+            <div class="task__ansver">Відповідь: результат в консолі</div>
+          </div>
+        </article>
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №3</h2>
+          <div class="task__content">
+            <h3 class="task__question">Що потрапить в консоль?</h3>
+            <pre>
+    if (2 * 20 <= 10 || 30 / 2 < 5 && 10 <="10" || 20==="20" ) { 
+       console.log('000'); 
+    }
+                  </pre>
+            <div class="task__ansver">Відповідь:
+              <pre>
+<br> 1. множимо 2 на 20 = 40
+<br> 2. порівнюємо чи 40 меньше/рівно 10 - результат false
+<br> 3. 30 ділемо на 2 = 15 і порівнюємо
+<br> чи 15 меньше за 5 -
+<br> отримуємо результ false
+<br> 4. порівнюємо чи число 10 більше/рівно рядку 10 - 
+отримуємо результат true
+<br> 5. перевіряємо false && true - першим у нас іде false 
+порівняння закінчилося
+<br> отримали результат false
+<br> 6. далі порівнюємо чи число 20 строго дорівнює рядку 
+зі значеням 20
+<br> отримуємо результат false
+<br> 7. Рухаємося зліва направо. І тепер отримані булеві 
+значення false || false || false порівнюємо за допомогою
+<br> оператора || результатом у нас буде false так як ніде 
+не було знайдено результату true
+<br> 8. В консоль нічого не виведеться
+              </pre>
+            </div>
+          </div>
+        </article>
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №4</h2>
+          <div class="task__content">
+            <h3 class="task__question">Створіть функцію, яка повертає результат ділення числа a на число b з додаванням рядка "Результат ділення:"
+            </h3>
+            <pre>
+            Викличте функцію передаючі різні значення, у тому числі не передаючи зовсім.
+            Функція не має повертати NaN, Infinite або помилку
+                  </pre>
+            <div class="task__ansver">Відповідь: в консолі</div>
+          </div>
+        </article>
+        <article class="page__task task">
+          <h2 class="task__subtitle">Задача №5</h2>
+          <div class="task__content">
+            <h3 class="task__question">Створіть масив даних - 5 елементів, один з яких число 10
+            </h3>
+            <pre>
+            Обробіть масив за допомогою методу перебору
+            Перевіряйте елемент на відповідність числу 10, 
+            та у разі відповідності, виводьте в консоль
+                  </pre>
+            <div class="task__ansver">Відповідь: в консолі</div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__text">я підвал</div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/dynamic_adapt.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
