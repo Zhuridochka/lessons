@@ -1,10 +1,9 @@
 @use "sass:math";
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
 
 // Локальне підключення шрифтів
-@import "_fonts.scss";
+//@import "_fonts.scss";
 // Скидання стилів
 @import "_reset.scss";
 // Міксіни
@@ -16,7 +15,7 @@
 // @import "_footer.scss";
 // ...@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 // Іконочний шрифт
-@import "_iconts_font.scss";
+//@import "_iconfonts.scss";
 // Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
 // Мінімальна ширина сторінки
 $minWidth: 320;
@@ -42,8 +41,9 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  color: var(--whiteColor);
+  font-size: toRem(16);
+  color: var(--mainColor);
+
   .menu-open & {
     overflow: hidden;
   }
@@ -51,13 +51,10 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: clip;
-  padding-left: toRem(20);
-  padding-right: toRem(20);
-
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: var(--blackColor);
+  background-color: var(--whiteColor);
 
   & > main {
     flex-grow: 1;
@@ -71,34 +68,6 @@ body {
   padding-right: 15px;
 }
 //========Загальні стилі==========//
-
-//========Main-page==========//
-.page {
-  display: inline-block;
-  &--margin {
-    margin-top: toRem(30);
-    margin-left: toRem(50);
-  }
-  span {
-    opacity: 0;
-    font-size: toRem(30);
-    letter-spacing: toEm(5, 30);
-    display: inline-block;
-    animation: animate 1s forwards;
-  }
-}
-
-@keyframes animate {
-  0% {
-    opacity: 0;
-    transform: rotate(30deg) translate(0, 30%);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(0deg) translate(0, 0%);
-  }
-}
-
 .menu {
   // .menu__body
   &__body {
@@ -110,7 +79,6 @@ body {
   // .menu__list
   &__list {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: toRem(20);
     justify-content: space-between;
@@ -140,16 +108,68 @@ body {
     }
   }
 }
+//========Header==========//
+.header {
+  background-color: var(--blackColor);
 
-.button-new {
-  font-size: toRem(20);
-  padding: toRem(15) toRem(20);
-  line-height: 1.2;
-  background-color: #ff6f61;
-  border: 1px solid yellowgreen;
-  border-radius: toRem(4);
+  // .header__container
+
+  &__container {
+    padding-top: toRem(5);
+    padding-bottom: toRem(5);
+  }
+
+  // .header__text
+
+  &__text {
+    font-size: toRem(30);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
+  }
 }
 
+//========Main-page==========//
+.page {
+  // .page__container
+
+  &__container {
+    padding-top: toRem(30);
+    padding-bottom: toRem(50);
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // row-gap: toRem(40);
+  }
+
+  // .page__title
+
+  &__title {
+    display: inline-block;
+    align-items: center;
+    font-size: toRem(28);
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: toRem(40);
+  }
+
+  // .page__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    // gap: toRem(10);
+    font-weight: 500;
+    font-size: toRem(18);
+    color: var(--primaryColor);
+    margin-bottom: toRem(20);
+    // &:last-child {
+    //   margin-bottom: toRem(30);
+    // }
+  }
+}
 .button {
   background-color: #ffffff;
   padding: toRem(10) toRem(20);
@@ -162,15 +182,43 @@ body {
   max-width: toRem(150);
   border-radius: toRem(5);
   border: 1px solid #000000;
+  // .button--margin
+
   &--margin {
     margin-top: toRem(20);
     margin-bottom: toRem(20);
   }
 }
-
 .some-image {
   max-width: 50%;
-  // height: 100%;
   aspect-ratio: 500 / 350;
   object-fit: cover;
 }
+.link {
+  text-decoration: underline;
+}
+
+//----Footer------//
+.footer {
+  background-color: var(--blackColor);
+
+  // .footer__container
+
+  &__container {
+    padding-top: toRem(5);
+    padding-bottom: toRem(5);
+  }
+
+  // .footer__text
+
+  &__text {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
+  }
+}
+
+//============================
