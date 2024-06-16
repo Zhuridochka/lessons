@@ -220,18 +220,21 @@ body {
   font-weight: 600;
   max-width: 9.375rem;
   border-radius: 0.3125rem;
-  border: 1px solid #000000;
+  border: 1px solid var(--primaryColor);
+  background-color: #0c6876;
+  color: var(--primaryColor);
 }
 .button--margin {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
-
 .some-image {
   max-width: 50%;
   aspect-ratio: 500/350;
   -o-object-fit: cover;
      object-fit: cover;
+  float: left;
+  padding-right: 0.625rem;
 }
 
 .link {
