@@ -1305,6 +1305,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 34px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 @media (max-width: 40.625em) {
   .catalog-brand__title {
