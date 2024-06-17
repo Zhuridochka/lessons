@@ -282,6 +282,34 @@ body {
   }
 }
 
+.title {
+  font-family: "Roboto0", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+@media (min-width: 84.375em) {
+  .title {
+    font-size: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 1.875rem , 1.4866504854rem  +  1.9417475728vw , 3.125rem )) {
+    .title {
+      font-size: clamp( 1.875rem , 1.4866504854rem  +  1.9417475728vw , 3.125rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.875rem , 1.4866504854rem  +  1.9417475728vw , 3.125rem )) {
+    .title {
+      font-size: calc(1.875rem + 1.25 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
 .navigation-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,7 +346,7 @@ body {
 .navigation-box__item:hover {
   color: var(--primaryColor);
 }
-.navigation-box__item:active {
+.navigation-box__item.active {
   color: var(--mainColor);
 }
 .navigation-box__link {
@@ -594,11 +622,11 @@ body {
 .top-header__search:has(> .entry:focus) {
   outline: 0.0625rem solid var(--primaryColor);
 }
-.top-header__icon-search {
+.top-header__magic-glass {
   width: 1.25rem;
   height: 1.25rem;
 }
-.top-header__icon-search img {
+.top-header__magic-glass img {
   width: 100%;
 }
 .top-header__entry {
@@ -793,34 +821,6 @@ body {
   }
   .menu-open .menu {
     right: 0;
-  }
-}
-
-.title {
-  font-family: "Roboto0", sans-serif;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-@media (min-width: 84.375em) {
-  .title {
-    font-size: 3.125rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 84.375em) {
-  @supports (font-size: clamp( 1.875rem , 1.4866504854rem  +  1.9417475728vw , 3.125rem )) {
-    .title {
-      font-size: clamp( 1.875rem , 1.4866504854rem  +  1.9417475728vw , 3.125rem );
-    }
-  }
-  @supports not (font-size: clamp( 1.875rem , 1.4866504854rem  +  1.9417475728vw , 3.125rem )) {
-    .title {
-      font-size: calc(1.875rem + 1.25 * (100vw - 20rem) / 64.375);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .title {
-    font-size: 1.875rem;
   }
 }
 
@@ -1198,12 +1198,6 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  cursor: pointer;
-}
-@media (any-hover: hover) {
-  .brand-section:hover {
-    color: var(--primaryColor);
-  }
 }
 @media (min-width: 84.375em) {
   .brand-section__container {
