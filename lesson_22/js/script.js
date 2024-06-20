@@ -306,26 +306,30 @@ if (2 * 20 <= 10 || (30 / 2 < 5 && 10 <= "10") || 20 === "20") {
 //* Задача №4
 let result;
 
+function showMessage() {
+  return `Результат ділення: ${result}`;
+}
+
 function divNum(a, b) {
   result = a / b;
 
   if (!Number.isNaN(result) && isFinite(result)) {
-    console.log(`Результат ділення: ${result}`);
+    return alert(`Результат ділення: ${result}`);
   } else if (b === 0) {
-    console.log(`на нуль ділити не можна`);
+    return alert(`на нуль ділити не можна`);
   } else {
-    console.log(`помилка у введені даних, ведіть два коректних значення`);
+    return alert(`помилка у введені даних, ведіть два коректних значення`);
   }
 }
 
-divNum(15, 3);
-divNum(25, 0);
-divNum("12", 3);
-divNum(20, "6");
-divNum("cola", 2);
-divNum("", "");
-divNum(85, "pepsi");
-divNum(NaN, Infinity);
+showMessage(divNum(15, 3));
+showMessage(divNum(25, 0));
+showMessage(divNum("12", 3));
+showMessage(divNum(20, "6"));
+showMessage(divNum("cola", 2));
+showMessage(divNum("", ""));
+showMessage(divNum(85, "pepsi"));
+showMessage(divNum(NaN, Infinity));
 
 //* Задача №5
 const someArray = ["cola", 56, NaN, 10, undefined];
