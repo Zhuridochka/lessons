@@ -197,6 +197,10 @@ function documentAction(e) {
 }
 
 //* Задача №4
+const timerElement = document.querySelector(".content-block__item");
+const valueElement = +timerElement.dataset.value || 10;
+const speedInterval = +timerElement.dataset.speedInterval || 1200;
+
 const options = {
   root: null,
   rootMargin: "0px 0px 0px 0px",
@@ -208,6 +212,21 @@ const callback = (entries, observer) => {
     const currentElement = entry.target;
     if (entry.isIntersecting) {
       currentElement.classList.add("animate");
+
+      // Створення функції для таймеру
+      let i = 1;
+      let timer = setInterval(() => {
+        timerElement.textContent = i++;
+        if (
+          timerElement.textContent == valueElement &&
+          timerElement.hasAttribute("data-value") &&
+          timerElement.hasAttribute("data-speed-interval")
+        ) {
+          clearInterval(timer);
+        } else {
+          null;
+        }
+      }, speedInterval);
     } else {
       currentElement.classList.remove("animate");
     }
@@ -220,23 +239,3 @@ const animElements = document.querySelectorAll("[class*='--anim']");
 animElements.forEach((animElement) => {
   observer.observe(animElement);
 });
-
-// Створення функції для зворотнього таймеру
-const timerElement = document.querySelector(".content-block__item");
-const valueElement = +timerElement.dataset.value || 10;
-const speedInterval = +timerElement.dataset.speedInterval || 1200;
-
-let i = 1;
-
-let timer = setInterval(() => {
-  timerElement.textContent = i++;
-  if (
-    timerElement.textContent == valueElement &&
-    timerElement.hasAttribute("data-value") &&
-    timerElement.hasAttribute("data-speed-interval")
-  ) {
-    clearInterval(timer);
-  } else {
-    null;
-  }
-}, speedInterval);
