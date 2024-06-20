@@ -1,241 +1,355 @@
 "use strict";
 
-// Події в JavaScript
+// let result = 2 + (3 * 10) / "5";
+// console.log(result);
 
-// const button = document.querySelector(".page__button");
+// let num = 5;
+// let result = 2 + (3 * 10) / ++num;
 
-// button.addEventListener("click", () => {
-//   alert("Hello, dear friend!");
+// console.log(result);
 
-//   // button.style.backgroundColor = "#794f45";
-// });
+//* Оператори порівняння
+// Повертають або true або false
 
-// button.addEventListener("click", setStyle);
-// button.addEventListener("mouseenter", setStyle);
-// button.addEventListener("mouseleave", setStyleLeave);
+// let result = 5 >= "3";
+// console.log(result);
+// console.log(typeof result);
 
-// function setStyle() {
-//   button.style.backgroundColor = "#794f45";
-// }
+// let result = 5 != "5";
+// console.log(result);
 
-// function setStyleLeave() {
-//   button.style.backgroundColor = "#4b8e32";
-// }
+// let result = 5 !== "5";
+// console.log(result);
 
-//* Одна подія на декілька кнопок з однаковим класом
+// let a = 6;
+// let b = "6";
+// let result = a === b;
+// console.log(result);
 
-// const buttons = document.querySelectorAll(".page__button");
-// const pageContainer = document.querySelector(".page__container");
-// pageContainer.insertAdjacentHTML(
-//   "beforeend",
-//   `<button class="page__button button" type="button">Add click me</button>`
-// );
+// console.log(typeof a);
+// console.log(typeof b);
 
-// pageContainer.insertAdjacentHTML(
-//   "beforeend",
-//   `<input class="page__button button" type="button" value="go over">`
-// );
+//* Логічні оператори
+// оператор ! - не (унарний - працює з однією складовою)
 
-// Цей підхід не дуже правильний. Високе навантаження на браузер
-// buttons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     button.style.backgroundColor = "#794f45";
-//     button.style.color = "black";
-//     alert("Hello!");
-//   });
-// });
+// let result = !0;
+// let result = null;
+// let result = !undefined;
+// let result = NaN;
 
-//* Змінна події event(e)
+// console.log(typeof result);
+// console.log(result);
+// console.log(Boolean(result));
 
-//* Делегування події
-// const pageContainer = document.querySelector(".page__container");
-// pageContainer.insertAdjacentHTML(
-//   "beforeend",
-//   `<button class="page__button button" type="button">Add click</button>`
-// );
-
-// document.addEventListener("click", documentAction);
-// // document.addEventListener("mouseenter", documentAction);
-
-// const header = document.querySelector(".header");
-// const textHeader = document.querySelector(".header__text");
-// document.addEventListener("click", setStyle);
-
-// function setStyle(e) {
-//   const elementTarget = e.target;
-
-//   if (elementTarget.closest(".header__text")) {
-//     const currentElement = elementTarget.closest(".header");
-//     currentElement.classList.toggle("active");
-//   }
-// }
-
-// Дадавання классу show для кнопок button
-// document.addEventListener("click", documentAction);
-// document.addEventListener("mousemove", documentAction);
-
-// function documentAction(e) {
-//   const elementTarget = e.target;
-
-//   if (elementTarget.closest(".button") && e.type === "click") {
-//     const currentElement = elementTarget.closest(".button");
-//     currentElement.classList.toggle("show");
-//     const tag = e.target.tagName.toLowerCase();
-
-//     if (tag === "input") {
-//       alert("я тег `input`");
-//     }
-//   }
-
-//* Події миші
-//   if (elementTarget.closest(".block") && e.type === "mousemove") {
-//     const currentElement = elementTarget.closest(".block");
-//     console.log(e.clientX - currentElement.offsetLeft);
-//     console.log(e.clientY - currentElement.offsetTop);
-//   }
-//   e.preventDefault();
-// }
-
-//const elem = document.querySelector("header");
-// console.log(elem.tagName);
-// console.log(elem.tagName.toLowerCase());
-
-//* Scroll
-// const block = document.querySelector(".block");
-// window.addEventListener("scroll", windowScroll);
-
-// function windowScroll(e) {
-//   // console.log(window.scrollY);
-//   if (block.getBoundingClientRect().top - window.innerHeight <= 0)
-//     console.log(`Об'єкт з'явився`);
-// }
-
-//* Intersextion Observer
-// налаштування Intersextion Observer
-// const options = {
-//   root: null,
-//   rootMargin: "0px 0px 0px 0px",
-//   threshold: 0.5,
-// };
-
-// const callback = (entries, observer) => {
-//   entries.forEach((entry) => {
-//     const currentElement = entry.target;
-//     if (entry.isIntersecting) {
-//       currentElement.classList.add("animate");
-//       console.log("Я тебе бачу");
-//     } else {
-//       currentElement.classList.remove("animate");
-//       console.log("Я не тебе бачу");
-//     }
-//   });
-// };
-
-// const observer = new IntersectionObserver(callback, options);
-
-// const animElements = document.querySelectorAll("[class*='--anim']");
-// animElements.forEach((animElement) => {
-//   observer.observe(animElement);
-// });
-
-//* Подія завантаження
-// window.addEventListener("load", pageLoaded);
-// function pageLoaded(e) {
-//   document.documentElement.style.opacity = 1;
-// }
-
-//* Таймер setTimeout
-//let i = 10;
-//let timer = setInterval(() => {
-//console.log(i);
-// if (i === 1) {
-//   clearInterval(timer);
+// if (!0) {
+//   console.log("go to home");
 // } else {
-//   null;
+//   console.log("not go to home");
 // }
 
-// ця ж перевірка за допомогою
-// тернарного оператора
-//   i === 1 ? clearInterval(timer) : null;
-//   --i;
-// }, 1000);
+// оператор || - або
 
+// let a = "хліб";
+// let b = "булка";
+
+// if (!a || !b) {
+//   console.log("продовжую вчитись");
+// } else {
+//   console.log("йду в АТБ");
+// }
+// console.log(typeof a);
+// console.log(a);
+// console.log(typeof b);
+// console.log(b);
+
+// console.log(result);
+// console.log(Boolean(result));
+
+// оператор && - та (і)
+
+// let result = "хліб" && " ";
+
+// if (result == false) {
+//   console.log("йду на базар за недостаючим інгрідієнтом");
+// } else {
+//   console.log("відпочиваю");
+// }
+
+//* Умовне вітвлення
+// if - якщо;
+// else if  - тоді якщо;
+// else - тоді;
+
+// let numberOne = 5;
+// let numberTwo = 30;
+
+// let result =
+//   numberOne <= numberTwo
+//     ? `${numberOne} меньше за ${numberTwo}`
+//     : `нічого не спрацювало`;
+// console.log(result);
+
+// if (numberOne > numberTwo) {
+//   console.log(`${numberOne} більше за ${numberTwo}`);
+// } else if (numberOne === 10) {
+//   console.log(`${numberOne} дорівнює 10`);
+// } else if (numberTwo === 20) {
+//   console.log(`${numberTwo} дорівнює 30`);
+// } else {
+//   console.log(`нічого не спрацювало`);
+// }
+
+// if (numberOne < numberTwo) {
+//   console.log(`${numberOne} більше за ${numberTwo}`);
+// } else if (numberOne === 10) {
+//   console.log(`numberOne дорівнює 10`);
+// } else if (numberTwo === 30) {
+//   console.log(`numberTwo дорівнює 20`);
+// } else {
+//   console.log(`Все пропало`);
+// }
+
+// console.log("Продовження коду відбувається далі....");
+
+//* Оператор умови ?
+// let someVar;
+// if (10 > 5) {
+//   someVar = "10 більше 5";
+// } else {
+//   someVar = "10 меньше 5";
+// }
+// console.log(someVar);
+
+// let someVar = 10 > 5 ? "10 більше 5" : "10 меньше 5";
+// console.log(someVar);
+// let userAge = 49;
+// const userType = userAge > 40 ? `Вже мудрий` : `Ще наівний`;
+// console.log(userType);
+
+// const item = document.querySelector(".some-class");
+// const animateSpeed = +item.dataset.speed || 500;
+// console.log(animateSpeed);
+
+//* Цикл for
+// let someString = `Привіт! Як твоє життя?`;
+// console.log(someString.length);
+// console.log(typeof someString);
+
+//for (let i = 0; i < someString.length; i++) {
+// const element = someString[i];
+//console.log(someString[i]);
+//}
+
+//* Цикл массиви []
+// let someArray = [1, 2, 3, "abc", true, "56", NaN, undefined];
+// console.log(Array.isArray(someArray));
+
+// if (Array.isArray(someArray)) {
+
+// }
+
+// for (let i = 0; i < someArray.length; i++) {
+//   const element = someArray[i];
+//   // console.log(element);
+
+//   if (element == 2) {
+//     console.log(`${element} - це число меньше за 3`);
+//   } else {
+//     console.log(`${element} - це число більше за 3 або не є числом взагалі`);
+//   }
+// }
+
+// let someArray = [1, 2, 3, "abc", true, "56", NaN, undefined];
+// someArray.forEach((item, index) => {
+//   console.log(index);
+//   console.log(item);
+// });
+
+//* Додати елемент в кінець масиву
+//let someArray = [1, 2, 3, "abc", true, "56", NaN, undefined];
+// someArray.push(`Перемога`);
+// console.log(someArray.includes("Перемога"));
+
+// if (!someArray.includes("Перемога")) {
+//   someArray.push(`Перемога`);
+// }
+// console.log(someArray);
+
+/* !someArray.includes("56") ? someArray.push(`56`) : null;*/
+//console.log(someArray);
+
+//* З масива у рядок
+// let someArray = [1, 2, 3, "abc", true, "56", NaN, undefined];
+// let someString = someArray.join(", ");
+// console.log(someString);
+
+//* Об'єкти
+// const user = {
+//   age: 40,
+//   name: "Iryna",
+//   type: "IT",
+// };
+// console.log(user.type);
+// console.log(user.name);
+// console.log(user);
+
+// const someStyles = {
+//   color: "green",
+//   ["font-size"]: 25,
+// };
+// console.log(someStyles["font-size"]);
+// console.log(someStyles.color);
+
+// someStyles["font-size"] = 30;
+// console.log(someStyles["font-size"]);
+// console.table(someStyles);
+
+//* Функції
+
+// showMessage();
+// function showMessage() {
+//   console.log(`I'm some text`);
+// }
+
+// showMessage();
+// showMessage();
+// showMessage();
+
+//* Параметри функції
+// function showMessage(someText = `Хочете отримувати повідомлення?`) {
+// console.log(someText);
+// alert(someText);
+// }
+// showMessage(`Нове повідомлення`);
+
+// const numOne = 10;
+// const numTwo = 30;
+
+// function calcSum(a = 5, b = 3) {
+//   return a + b;
+// }
+// function showMessage(someText = `Хочете отримувати повідомлення?`) {
+//   console.log(someText);
+// }
+// calcSum(numOne, numTwo);
+// showMessage(calcSum(253, numTwo));
+
+//* Стрілочні функції
+// let someName = (text = `Мій текст`) => console.log(text);
+// someName();
+
+// let someName = (text = `Мій текст`) => {
+//   console.log(text);
+//   console.log("another text");
+// .......
+// .......
+// .......
+// };
+// someName();
+
+//* Практика
+// Текст з ефектом друку
+
+// const someText = `Привіт! Це я - твоя анімація на js`;
+// let template = ``;
+
+// function initText(text) {
+//   for (let i = 0; i < someText.length; i++) {
+//     let item = someText[i];
+//     // item = item === " " ? "&nbsp" : item;
+//     template += `<span style='${
+//       item === " " ? `display:inline;` : ""
+//     } animation-delay: 0.${i * 0.1}s'>${item}</span>`;
+//   }
+// }
+// initText(someText);
+
+// Вивід у в'юпорт
+// const page = document.querySelector(".page");
+// page.insertAdjacentHTML("beforeend", template);
+
+//* Практика (продовження)
+
+// let someString = `Hello World 2024`;
+// console.log(`Кількість символів: ${someString.length}`);
+
+// for (let i = 0; i < someString.length; ++i) {
+//   console.log(someString[i]);
+// }
+
+// let usersNames = ["Вася", "Петро", "Ілдика"];
+
+// usersNames.forEach((usersName) => {
+//   console.log(usersName);
+// });
+
+//=========Домашнеє завдання
 //* Задача №1
-document.addEventListener("click", getClass);
-const header = document.querySelector(".header");
-console.log(header);
+let someVar = 0;
+++someVar;
 
-function getClass(e) {
-  const elementTarget = e.target;
-
-  if (elementTarget.closest(".item-page") && e.type === "click") {
-    const currentElement = elementTarget.closest(".item-page");
-    currentElement.classList.toggle("active");
-  }
+if (someVar) {
+  console.log(someVar);
 }
+//в консоль потрапить число 1
 
 //* Задача №2
-const bodyElement = document.body;
-window.addEventListener("load", pageLoaded);
-
-function pageLoaded(e) {
-  bodyElement.classList.add("loaded");
+for (let i = 1; i <= 10; i++) {
+  console.log(`Пункт №${i}`);
 }
 
 //* Задача №3
-const footerElement = document.querySelector(".footer");
-document.addEventListener("mousemove", documentAction);
-
-function documentAction(e) {
-  const elementTarget = e.target;
-
-  if (elementTarget.closest(".header") && e.type === "mousemove") {
-    footerElement.classList.add("show");
-  } else {
-    footerElement.classList.remove("show");
-  }
+if (2 * 20 <= 10 || (30 / 2 < 5 && 10 <= "10") || 20 === "20") {
+  console.log("000");
 }
 
 //* Задача №4
-const timerElement = document.querySelector(".content-block__item");
-const valueElement = +timerElement.dataset.value || 10;
-const speedInterval = +timerElement.dataset.speedInterval || 1200;
+let result;
 
-const options = {
-  root: null,
-  rootMargin: "0px 0px 0px 0px",
-  threshold: 0.5,
-};
+function showMessage() {
+  return `Результат ділення: ${result}`;
+}
 
-const callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    const currentElement = entry.target;
-    if (entry.isIntersecting) {
-      currentElement.classList.add("animate");
+function divNum(a, b) {
+  result = a / b;
 
-      // Створення функції для таймеру
-      let i = 1;
-      let timer = setInterval(() => {
-        timerElement.textContent = i++;
-        if (
-          timerElement.textContent == valueElement &&
-          timerElement.hasAttribute("data-value") &&
-          timerElement.hasAttribute("data-speed-interval")
-        ) {
-          clearInterval(timer);
-        } else {
-          null;
-        }
-      }, speedInterval);
-    } else {
-      currentElement.classList.remove("animate");
-    }
-  });
-};
+  if (!Number.isNaN(result) && isFinite(result)) {
+    return `Результат ділення: ${result}`;
+  } else if (b === 0) {
+    return `на нуль ділити не можна`;
+  } else {
+    return `помилка у введені даних, ведіть два коректних значення`;
+  }
+}
 
-const observer = new IntersectionObserver(callback, options);
+showMessage(divNum(15, 3));
+showMessage(divNum(25, 0));
+showMessage(divNum("12", 3));
+showMessage(divNum(20, "6"));
+showMessage(divNum("cola", 2));
+showMessage(divNum("", ""));
+showMessage(divNum(85, "pepsi"));
+showMessage(divNum(NaN, Infinity));
 
-const animElements = document.querySelectorAll("[class*='--anim']");
-animElements.forEach((animElement) => {
-  observer.observe(animElement);
+//* Задача №5
+const someArray = ["cola", 56, NaN, 10, undefined];
+someArray.forEach((element, index) => {
+  if (element === 10) {
+    console.log(
+      `Цей елемент масиву пройшов перевірку на відповідність числу 10`
+    );
+  } else {
+    console.log(
+      `Цей елемент масиву НЕ пройшов перевірку на відповідність числу 10`
+    );
+  }
 });
+
+// Другий варіант вирішення задачі без застосування циклу
+if (someArray.includes(10)) {
+  console.log(`Цей елемент масиву пройшов перевірку на відповідність числу 10`);
+}
+
+/*--------------*/
+
+// console.log(isNaN(NaN));
