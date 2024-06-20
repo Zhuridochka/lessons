@@ -323,13 +323,13 @@ function divNum(a, b) {
 }
 
 showMessage(divNum(15, 3));
-showMessage(divNum(25, 0));
-showMessage(divNum("12", 3));
-showMessage(divNum(20, "6"));
-showMessage(divNum("cola", 2));
-showMessage(divNum("", ""));
-showMessage(divNum(85, "pepsi"));
-showMessage(divNum(NaN, Infinity));
+// showMessage(divNum(25, 0));
+// showMessage(divNum("12", 3));
+// showMessage(divNum(20, "6"));
+// showMessage(divNum("cola", 2));
+// showMessage(divNum("", ""));
+// showMessage(divNum(85, "pepsi"));
+// showMessage(divNum(NaN, Infinity));
 
 //* Задача №5
 const someArray = ["cola", 56, NaN, 10, undefined];
