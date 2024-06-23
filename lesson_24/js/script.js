@@ -215,7 +215,7 @@ const callback = (entries, observer) => {
       let i = 1;
       let timer = setInterval(() => {
         timerElement.textContent = i++;
-        if (timerElement.textContent == valueElement) {
+        if (timerElement.textContent >= valueElement) {
           clearInterval(timer);
         }
       }, speedInterval);
