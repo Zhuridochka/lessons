@@ -161,14 +161,12 @@
 // }, 1000);
 
 //* Задача №1
-document.addEventListener("click", getClass);
-const header = document.querySelector(".header");
-console.log(header);
+document.addEventListener("click", documentClickAction);
 
-function getClass(e) {
+function documentClickAction(e) {
   const elementTarget = e.target;
 
-  if (elementTarget.closest(".item-page") && e.type === "click") {
+  if (elementTarget.closest(".item-page")) {
     const currentElement = elementTarget.closest(".item-page");
     currentElement.classList.toggle("active");
   }
@@ -183,17 +181,17 @@ function pageLoaded(e) {
 }
 
 //* Задача №3
+const headerElement = document.querySelector(".header");
 const footerElement = document.querySelector(".footer");
-document.addEventListener("mousemove", documentAction);
 
-function documentAction(e) {
-  const elementTarget = e.target;
-
-  if (elementTarget.closest(".header") && e.type === "mousemove") {
+if (footerElement && headerElement) {
+  headerElement.addEventListener("mouseenter", () => {
     footerElement.classList.add("show");
-  } else {
+  });
+
+  headerElement.addEventListener("mouseleave", () => {
     footerElement.classList.remove("show");
-  }
+  });
 }
 
 //* Задача №4
@@ -209,26 +207,21 @@ const options = {
 
 const callback = (entries, observer) => {
   entries.forEach((entry) => {
-    const currentElement = entry.target;
     if (entry.isIntersecting) {
+      const currentElement = entry.target;
       currentElement.classList.add("animate");
 
       // Створення функції для таймеру
       let i = 1;
       let timer = setInterval(() => {
         timerElement.textContent = i++;
-        if (
-          timerElement.textContent == valueElement &&
-          timerElement.hasAttribute("data-value") &&
-          timerElement.hasAttribute("data-speed-interval")
-        ) {
+        if (timerElement.textContent == valueElement) {
           clearInterval(timer);
-        } else {
-          null;
         }
       }, speedInterval);
-    } else {
-      currentElement.classList.remove("animate");
+
+      // Відключаємо спостереження після першого спрацювання
+      observer.unobserve(currentElement);
     }
   });
 };
