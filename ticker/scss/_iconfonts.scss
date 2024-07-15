@@ -1,0 +1,22 @@
+[class*=" _icon-"]::before {
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-across:before {
+  content: "\e935";
+  color: #ffff;
+}
+._icon-dagger:before {
+  content: "\e913";
+}
+._icon-search:before {
+  content: "\e925";
+}

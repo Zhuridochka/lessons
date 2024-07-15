@@ -1,0 +1,413 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:regular&display=swap");
+
+// Локальне підключення шрифтів
+@import "_fonts.scss";
+// Скидання стилів
+@import "_reset.scss";
+// Міксіни
+@import "_mixins.scss";
+// Окремі сторінки
+// @import "_home.scss";
+// Окремі компоненти
+// @import "_header.scss";
+// @import "_footer.scss";
+
+// Іконочний шрифт
+@import "_iconfonts.scss";
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1627;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+:root {
+  --header-hight: clamp(4.938rem, 4.175rem + 3.81vw, 8.75rem);
+}
+// ==========================================================
+html {
+  scroll-behavior: smooth; //Плавна прокрутка по target до потрібної секції
+}
+body {
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+
+  .menu-open & {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  // background-color: #000001;
+  & > main {
+    flex-grow: 1;
+  }
+}
+
+[class*="__container"] {
+  max-width: toRem(1303);
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+//===================
+.page {
+  // min-height: 100vh;
+  max-height: toRem(770);
+  position: relative;
+
+  // .page__cantainer
+  &__container {
+    padding-top: toRem(20);
+    padding-bottom: toRem(20);
+    position: relative;
+    z-index: 2;
+  }
+  // .page__block
+  &__block {
+    width: 100%;
+    height: toRem(100);
+    margin-top: toRem(20);
+  }
+
+  // .page__button-search
+  &__button-search {
+  }
+
+  // .page__book
+  &__book {
+    letter-spacing: toRem(-0.4);
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1.31;
+    position: relative;
+    padding: toRem(5);
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block-start: 100%;
+      inset-inline-start: 0;
+      block-size: toRem(2);
+      inline-size: 100%;
+      background-color: red;
+      border-radius: toRem(4);
+      transition: all 0.5s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          inset-block-start: 0;
+          block-size: 100%;
+        }
+      }
+    }
+  }
+  // .page__box
+  &__box {
+    border: toRem(1) solid yellow;
+    padding: toRem(10) toRem(15);
+
+    // overflow: auto;
+    // block-size: toRem(50);
+    // inline-size: toRem(700);
+    max-width: toRem(700);
+    min-width: toRem(350);
+    height: toRem(50);
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // .page__text
+  // &__text p {
+  //   overflow: hidden;
+  //   white-space: nowrap;
+  //   text-overflow: ellipsis;
+  // }
+
+  // .page__image
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    // aspect-ratio: 1627 / 810;
+    @media (max-width: toEm(374.98)) {
+      // aspect-ratio: 375 / 412;
+      object-fit: contain;
+      bottom: -100px;
+    }
+  }
+}
+// .about-section {
+//   // .about-section__list
+//   &__list {
+//     display: flex;
+//     overflow: hidden;
+//     text-transform: uppercase;
+//     font-size: 20px;
+//   }
+
+//   // .about-section__item
+//   &__item {
+//     padding-inline: 40px;
+//   }
+
+//   // .about-section__link
+//   &__link {
+//     white-space: nowrap;
+//   }
+// }
+
+.about-section {
+  width: 100%;
+  overflow: hidden;
+
+  // .about-section__list
+  &__list {
+    display: flex;
+    margin-bottom: toRem(30);
+  }
+
+  // .about-section__item
+  &__item {
+    // display: inline-block;
+    padding: toRem(0) toRem(50);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: sans-serif;
+    white-space: nowrap;
+  }
+}
+
+// .page {
+
+// 		// .page__container
+
+// 		&__container {
+// 		}
+// }
+// .about-section {
+
+// 		// .about-section__list
+
+// 		&__list {
+// 		}
+
+// 		// .about-section__item
+
+// 		&__item {
+// 		}
+// }
+
+// .no-pointer-events {
+//   color: #fff;
+//   font-size: 18px;
+//   text-transform: uppercase;
+//   line-height: 1.2;
+//   font-weight: 600;
+//   background-color: red;
+//   padding: toRem(15) toRem(20);
+//   border-radius: toRem(8);
+//   margin-right: toRem(20);
+//   pointer-events: none;
+//   @media (any-hover: hover) {
+//     &:hover {
+//       background-color: red;
+//     }
+//   }
+// }
+// .button {
+//   color: #fff;
+//   font-size: 18px;
+//   text-transform: uppercase;
+//   line-height: 1.2;
+//   font-weight: 600;
+//   background-color: #4b8e32;
+//   padding: toRem(15) toRem(20);
+//   border-radius: toRem(8);
+//   @media (any-hover: hover) {
+//     &:hover {
+//       background-color: #256d0a;
+//     }
+//   }
+// }
+
+.no-pointer-events {
+  // pointer-events: none;
+}
+
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: toRem(200);
+  width: 400px;
+  background-color: #77608d;
+  // pointer-events: none;
+  @media (any-hover: hover) {
+    &:hover {
+      .box {
+        transform: rotate(-30deg) scale(1.2);
+      }
+    }
+  }
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: auto;
+  padding-block: toRem(15);
+  padding-inline: toRem(30);
+  inline-size: auto;
+  background-color: #794f45;
+  writing-mode: horizontal-bt;
+  transform: rotate(15deg);
+  transition: all 1s;
+}
+
+.container-box {
+}
+.box {
+}
+
+.touch-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  color: #000001;
+  cursor: pointer;
+}
+
+#touchArea {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  text-align: center;
+  color: #000001;
+  line-height: 200px;
+  font-size: 18px;
+  user-select: none;
+  margin-top: toRem(30);
+}
+
+#linkGoogle {
+  display: block;
+  padding-top: toRem(20);
+  transition: color 0.4s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+//====================
+.background {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/ny_city_800x533_px.jpg");
+  background-size: cover;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  @media (any-hover: hover) {
+    &:hover {
+      filter: blur(4px);
+
+      &::before {
+        content: "";
+        position: fixed;
+        inset-inline-start: 0;
+        inset-block-end: 0;
+        block-size: 100%;
+        inline-size: 100%;
+        background-color: rgba(0, 0, 1, 0.5);
+      }
+    }
+  }
+}
+.content {
+  position: absolute;
+  top: 70%;
+  transform: translate(100%, 0px);
+  z-index: 1;
+  color: white;
+  text-align: center;
+  // margin-top: 20%;
+}
+//============
+
+.search-button {
+  // .search-button__icon
+
+  &__icon {
+    display: block;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    block-size: toRem(50);
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    border: toRem(2) solid #ffbc57;
+    border-radius: 50%;
+    position: relative;
+    span {
+      block-size: toRem(23);
+      aspect-ratio: 1 / 1;
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.3s;
+      font-size: toRem(23);
+
+      &:first-child {
+      }
+      &:last-child {
+        transform: translate(-50%, -50%) scale(0);
+      }
+      .search-open & {
+        &:first-child {
+          transform: translate(-50%, -50%) scale(0);
+        }
+        &:last-child {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+}
