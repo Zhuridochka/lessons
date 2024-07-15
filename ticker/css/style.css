@@ -267,7 +267,7 @@ body {
   .page__image {
     -o-object-fit: contain;
        object-fit: contain;
-    bottom: -100px;
+    bottom: 0;
   }
 }
 
